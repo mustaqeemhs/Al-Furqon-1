@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Al Furqan Online Academy | Online Quran Classes</title>
+<meta name="description" content="Al Furqan Online Academy offers online Quran learning through Quran reading, Tajweed, memorisation, basic Islamic duas and Hadith.">
+<meta name="theme-color" content="#043A2F">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--g:#064B3B;--gd:#043A2F;--gold:#F5B900;--acc:#1F8A6B;--pale:#F1F6F3;--ink:#14201C;--mut:#5d6b66;--brown:#87603F;--pad:clamp(16px,4vw,32px);--w:1140px;--sp:clamp(48px,7vw,96px);--half:46px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font:400 15px/1.6 Poppins,system-ui,sans-serif;color:var(--ink);background:#fff;overflow-x:clip;-webkit-text-size-adjust:100%}
+img,svg{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(var(--w),100% - 2*var(--pad));margin-inline:auto}
+h1,h2,h3{font-weight:700;line-height:1.2}h2{font-size:clamp(1.45rem,3vw + .7rem,2.4rem)}h3{font-size:1rem}
+section{padding:var(--sp) 0}.after{padding-top:calc(var(--sp) + var(--half))}
+.lbl{display:block;font-size:.74rem;font-weight:600;color:var(--acc);margin-bottom:8px}
+.hl{color:var(--acc)}.dk .hl,.hero .hl{color:var(--gold)}
+.head{text-align:center;margin-bottom:clamp(26px,4vw,44px)}.head p{color:var(--mut);margin-top:8px;font-size:.9rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 22px;border-radius:999px;font:600 .85rem Poppins,sans-serif;border:2px solid transparent;cursor:pointer;transition:transform .2s,background .2s;text-align:center}
+.btn:hover{transform:translateY(-2px)}.btn .ic{width:16px;height:16px}
+.b-g{background:var(--acc);color:#fff}.b-g:hover{background:#177a5d}.b-y{background:var(--gold);color:#1a1400}.b-y:hover{background:#ffc91f}.b-o{border-color:var(--g);color:var(--g)}
+.ic{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,#0b5a4b,#043a2f)}
+.ph::before{content:"";position:absolute;inset:0;opacity:.14;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='none' stroke='%23F5B900'%3E%3Cpath d='M24 4l6 14 14 6-14 6-6 14-6-14L4 24l14-6z'/%3E%3C/svg%3E")}
+.ph::after{content:attr(data-l);position:absolute;left:10px;right:10px;bottom:8px;font-size:.62rem;color:#e3d3a8;opacity:.75;word-break:break-all}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+/* hero + header */
+.hero{position:relative;color:#fff;min-height:101vh;min-height:101svh;display:flex;flex-direction:column;justify-content:center;padding:clamp(130px,19vh,190px) 0 calc(var(--half) + 44px);background:var(--gd)}
+.hbg{position:absolute;inset:0}.ov{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(4,58,47,.94),rgba(4,58,47,.74) 55%,rgba(4,58,47,.45)),linear-gradient(0deg,rgba(4,58,47,.75),transparent 45%)}
+.hero .wrap{position:relative;z-index:3}
+.top{position:absolute;top:0;left:0;right:0;z-index:5;font-size:.72rem;color:#e7efe9}.top .wrap{display:flex;justify-content:space-between;align-items:center;height:42px}
+.top a{display:inline-flex;gap:6px;align-items:center;margin-right:18px}.top .ic{width:14px;height:14px;color:var(--gold)}
+.top .wa-c{width:26px;height:26px;border-radius:50%;background:var(--gold);justify-content:center;margin:0}.top .wa-c .ic{color:var(--gd)}
+.nav{position:fixed;top:46px;left:0;right:0;margin:0 auto;width:min(var(--w),100% - 2*var(--pad));z-index:60;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.18);transition:top .3s}
+.nav.sc{top:10px}
+.ni{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 14px 0 20px;gap:12px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;color:var(--g);font-size:.95rem;letter-spacing:.03em;line-height:1.1}.brand svg{width:34px;height:34px;flex:none}.brand i{font-style:normal;color:var(--acc)}
+.menu{display:flex;gap:26px;font-size:.85rem;font-weight:500}.menu a:hover{color:var(--acc)}
+.nr{display:flex;gap:8px;align-items:center}.nr .btn{min-height:42px;padding:8px 20px}
+.burger{display:none;width:38px;height:38px;border:0;border-radius:8px;background:var(--pale);color:var(--g);cursor:pointer;place-items:center}
+.hc{max-width:640px}.ars{display:block;font:400 clamp(1.4rem,3.4vw,2.1rem)/1.6 Amiri,serif;color:var(--gold);direction:rtl;text-align:left;margin-bottom:6px}
+h1{font-size:clamp(1.7rem,4vw + .7rem,3.4rem);letter-spacing:-.01em}
+.hero p.lead{margin:16px 0 26px;font-size:clamp(.82rem,1.2vw + .5rem,1rem);color:#dbe6e0;max-width:480px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.ovl{position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);width:min(var(--w),100% - 2*var(--pad));z-index:4}
+.strip{background:var(--g);border-radius:16px;padding:clamp(16px,2.4vw,24px) clamp(14px,3vw,28px);display:grid;grid-template-columns:repeat(4,1fr);gap:16px;box-shadow:0 18px 36px rgba(4,58,47,.3);color:#fff}
+.si{display:flex;gap:11px;align-items:center}.si .i{width:42px;height:42px;border:1.5px solid var(--gold);border-radius:50%;color:var(--gold);display:grid;place-items:center;flex:none}.si .ic{width:20px;height:20px}
+.si b{display:block;font-size:.8rem;line-height:1.3}.si small{display:block;font-size:.68rem;color:#bcd0c8;line-height:1.35;margin-top:2px}
+/* about / why */
+.ab{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,64px);align-items:center}.ab p{color:var(--mut);font-size:.9rem;margin-top:14px}
+.ab .ph{aspect-ratio:1/.9;border-radius:16px;box-shadow:0 18px 40px rgba(4,58,47,.18)}
+.pts{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin:20px 0 26px;font-size:.84rem}.pts span{display:flex;gap:9px;align-items:center}.pts i{width:20px;height:20px;border-radius:50%;background:#dcece5;color:var(--acc);display:grid;place-items:center;flex:none}.pts svg{width:11px;height:11px;stroke-width:3}
+.pale{background:var(--pale)}.why{position:relative;padding-bottom:calc(var(--sp) + var(--half))}
+.wy{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.wc{background:#fff;border-radius:12px;padding:24px 18px;text-align:center;box-shadow:0 6px 20px rgba(4,58,47,.07)}.wc .ic{width:34px;height:34px;color:var(--acc);margin:0 auto 12px}.wc p{color:var(--mut);font-size:.78rem;margin-top:6px}.wc h3{font-size:.9rem}
+/* courses */
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cc{background:var(--pale);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}.cc:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(4,58,47,.14)}
+.cc .ph{aspect-ratio:16/11}.cc .b{padding:16px;flex:1;display:flex;flex-direction:column}.cc h3{font-size:.95rem}.cc p{font-size:.78rem;color:var(--mut);margin:6px 0 12px;flex:1}
+.mo{font-size:.72rem;font-weight:600;color:var(--acc);display:inline-flex;gap:5px;align-items:center}.mo .ic{width:13px;height:13px;transition:transform .2s}.cc:hover .mo .ic{transform:translateX(4px)}
+/* quran */
+.wood{max-width:860px;margin:0 auto;padding:clamp(14px,3vw,34px);border-radius:24px;background:repeating-linear-gradient(92deg,rgba(0,0,0,.05) 0 2px,transparent 2px 9px),linear-gradient(135deg,#9a6f49,#6d4a2e 60%,#87603F);box-shadow:0 30px 60px rgba(0,0,0,.4),inset 0 2px 0 rgba(255,255,255,.18)}
+.stage{perspective:2200px;padding:8px 0 12px}
+.book{position:relative;width:100%;aspect-ratio:1.42/1;perspective:2600px;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab;outline-offset:6px;filter:none}
+.book:active{cursor:grabbing}
+.book::before{content:"";position:absolute;z-index:-1;inset:-10px -10px -14px;border-radius:10px;background:linear-gradient(135deg,#0b6a55,#043a2f);box-shadow:inset 0 0 0 2px rgba(245,185,0,.6),inset 0 0 0 7px rgba(0,0,0,.12),inset 0 0 0 8px rgba(245,185,0,.3),0 22px 34px rgba(0,0,0,.5)}
+.book::after{content:"";position:absolute;z-index:-1;left:.6%;right:.6%;bottom:-7px;height:10px;border-radius:0 0 4px 4px;background:repeating-linear-gradient(90deg,#efe6cb 0 2px,#cdbf9b 2px 3px)}
+.leaf{position:absolute;top:0;left:0;width:50%;height:100%;transform-origin:right center;transform-style:preserve-3d;will-change:transform}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#f1ead2;overflow:hidden}
+.face.bk{transform:rotateY(180deg)}
+.face img{width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
+.face::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to left,rgba(0,0,0,.28),transparent 20%);opacity:1}
+.face.bk::after{background:linear-gradient(to right,rgba(0,0,0,.28),transparent 20%)}
+.face i{position:absolute;inset:0;background:#000;opacity:var(--s,0);z-index:3;pointer-events:none}
+.face .miss{position:absolute;inset:8%;border:1.5px solid rgba(135,96,63,.5);display:none;place-items:center;text-align:center;color:var(--brown);font-size:.7rem;padding:8px;line-height:1.4}
+.face.m .miss{display:grid}
+.ctl{display:flex;justify-content:center;gap:12px;align-items:center;margin-top:22px;color:#e6ded0;font-size:.85rem}
+.ctl button{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(255,255,255,.5);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:grid;place-items:center}.ctl button:hover{background:rgba(255,255,255,.2)}
+
+.qs .ctl{color:var(--ink)}.qs .ctl button{border-color:var(--g);background:#fff;color:var(--g)}
+/* how */
+.hw{background:var(--g);border-radius:24px;padding:clamp(28px,5vw,52px) clamp(16px,4vw,48px);color:#fff}.hw .head{margin-bottom:34px}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sc{position:relative;background:#fff;color:var(--ink);border-radius:12px;padding:30px 20px 24px;text-align:center}
+.sc .n{position:absolute;top:-11px;left:-6px;width:28px;height:28px;border-radius:50%;background:var(--gold);color:#1a1400;font:700 .75rem/28px Poppins;text-align:center}
+.sc .ic{width:52px;height:52px;padding:14px;border-radius:50%;background:var(--pale);color:var(--acc);margin:0 auto 12px}.sc h3{font-size:.9rem;text-transform:uppercase;letter-spacing:.08em;color:var(--g)}.sc p{font-size:.82rem;color:var(--mut);margin-top:6px}
+.verse{background:var(--gd);color:#fff;text-align:center;position:relative;overflow:hidden}
+.verse::before{content:"";position:absolute;inset:0;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' fill='none' stroke='%23F5B900'%3E%3Cpath d='M45 8l11 26 26 11-26 11-11 26-11-26-26-11 26-11z'/%3E%3Ccircle cx='45' cy='45' r='14'/%3E%3C/svg%3E")}
+.verse .wrap{position:relative}.ar{font-family:Amiri,serif;direction:rtl;line-height:2;font-size:clamp(1.7rem,5.4vw,3.2rem);color:var(--gold)}
+.verse blockquote{font-size:clamp(1rem,2.2vw,1.3rem);margin:14px auto 8px;max-width:620px;font-weight:500}.verse p{color:#bcd0c8;font-size:.9rem}
+/* form */
+.fb{max-width:800px;margin:0 auto;background:#fff;border-radius:16px;padding:clamp(20px,4.5vw,40px);box-shadow:0 16px 40px rgba(4,58,47,.1)}
+.fee{background:#e6f1ec;border-left:4px solid var(--acc);border-radius:8px;padding:12px 14px;font-size:.84rem;margin-bottom:20px;color:var(--g)}
+.fgd{display:grid;grid-template-columns:1fr 1fr;gap:16px}.fgd .full{grid-column:1/-1}
+label{display:block;font-size:.78rem;font-weight:600;color:var(--g);margin-bottom:5px}
+input,select,textarea{width:100%;min-height:48px;padding:11px 13px;border:1.5px solid #d6e0db;border-radius:10px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+textarea{min-height:100px;resize:vertical}input:focus,select:focus,textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(245,185,0,.35)}
+.chk{display:flex;gap:11px;align-items:flex-start;font-weight:400;font-size:.86rem;color:var(--ink)}.chk input{width:22px;min-height:22px;height:22px;margin-top:2px;accent-color:var(--acc)}
+.fb .btn{width:100%}.note{font-size:.8rem;color:var(--mut);margin-top:14px;text-align:center}
+.err{background:#fbeeea;color:#8a2f1c;border-radius:10px;padding:13px;font-size:.88rem;margin-top:14px}
+.spin{width:42px;height:42px;border:4px solid #dbe6e0;border-top-color:var(--acc);border-radius:50%;animation:sp .9s linear infinite;margin:0 auto 14px}@keyframes sp{to{transform:rotate(360deg)}}
+.ok{text-align:center;padding:10px 0}.ok .tick{width:72px;height:72px;border-radius:50%;background:var(--g);color:var(--gold);display:grid;place-items:center;margin:0 auto 16px;animation:pop .6s cubic-bezier(.2,.9,.3,1.2)}.ok .tick .ic{width:36px;height:36px;stroke-width:2.4}@keyframes pop{from{transform:scale(.4);opacity:0}}
+.ok h3{font-size:1.5rem;color:var(--g)}.ok p{color:var(--mut);margin:10px auto;max-width:460px}.ok .cta-row{justify-content:center;margin-top:18px}.ok .btn{width:auto}
+/* faq */
+.faq{max-width:780px;margin:0 auto;display:grid;gap:10px}.faq details{background:var(--pale);border-radius:12px}
+.faq summary{list-style:none;cursor:pointer;padding:15px 18px;min-height:54px;display:flex;justify-content:space-between;align-items:center;gap:14px;font-weight:600;font-size:.92rem}
+.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";font-size:1.5rem;color:var(--acc);transition:transform .25s;flex:none}.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 18px 18px;color:var(--mut);font-size:.88rem;animation:fd .3s}@keyframes fd{from{opacity:0;transform:translateY(-6px)}}
+/* cta + footer */
+.cta{background:var(--gold);padding:28px 0;color:#1a1400}.cta .wrap{display:flex;align-items:center;gap:18px;justify-content:space-between;flex-wrap:wrap}
+.cta .l{display:flex;gap:16px;align-items:center}.cta .ci{width:54px;height:54px;border-radius:50%;background:var(--gd);color:var(--gold);display:grid;place-items:center;flex:none}
+.cta h2{font-size:clamp(1.15rem,2vw + .5rem,1.6rem)}.cta p{font-size:.84rem}
+footer{background:var(--gd);color:#c3d3cc;padding:48px 0 0;font-size:.85rem}
+.f4{display:grid;grid-template-columns:1.4fr .8fr 1fr 1.2fr;gap:32px}footer h4{color:#fff;font-size:.95rem;margin-bottom:12px}footer ul{list-style:none;padding:0;display:grid;gap:7px}footer a:hover{color:var(--gold)}footer a{overflow-wrap:anywhere}
+footer .brand{color:#fff;margin-bottom:10px}footer .brand i{color:var(--gold)}.f4 p{line-height:1.6}.f4 .fa{font:400 1.3rem Amiri,serif;color:var(--gold);direction:rtl;text-align:left;margin-top:8px}
+.copy{border-top:1px solid rgba(255,255,255,.1);text-align:center;padding:18px 0;margin-top:32px;font-size:.75rem}
+.bn{display:none;position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:70;background:#fff;border-radius:18px;box-shadow:0 8px 28px rgba(0,0,0,.28);padding:6px;justify-content:space-around;align-items:flex-end}
+.bn a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:.62rem;font-weight:600;color:var(--mut);min-width:54px;min-height:48px}.bn .ic{width:20px;height:20px}
+.bn .c{margin-top:-26px}.bn .c span{width:52px;height:52px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;border:4px solid #fff;box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@media(max-width:1000px){.cg,.wy{grid-template-columns:repeat(2,1fr)}.f4{grid-template-columns:1fr 1fr}.f4>:first-child{grid-column:1/-1}}
+@media(max-width:900px){.menu{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border-radius:14px;padding:6px 18px 12px;flex-direction:column;gap:0;box-shadow:0 14px 30px rgba(0,0,0,.2)}.menu.open{display:flex}.menu a{padding:13px 0;border-bottom:1px solid #eef2f0;min-height:46px}.burger{display:grid}}
+@media(max-width:860px){:root{--half:72px}body{padding-bottom:88px}.bn{display:flex}.top .em{display:none}.nav{top:44px}.ni{height:54px;padding:0 10px 0 14px}.brand{font-size:.72rem}.brand i{display:block}.brand svg{width:30px;height:30px}.nr .btn{min-height:38px;padding:6px 14px;font-size:.72rem}.nr .btn .ic{display:none}
+.hero{padding-top:128px}.strip{grid-template-columns:1fr 1fr;gap:14px 12px}.si{gap:9px}.si .i{width:34px;height:34px}.si .ic{width:16px;height:16px}.si b{font-size:.74rem}.si small{font-size:.62rem}
+.ab{grid-template-columns:1fr}.ab .ph{order:-1;aspect-ratio:4/3.2}.pts{grid-template-columns:1fr}.hw{border-radius:16px}.sg{grid-template-columns:1fr;gap:16px}.sc{display:flex;gap:12px;text-align:left;align-items:center;padding:16px 16px 16px 20px}.sc .ic{margin:0;flex:none}.sc h3{letter-spacing:.06em}
+.fgd{grid-template-columns:1fr}.cta .wrap{flex-direction:column;align-items:flex-start}.cta .cta-row{width:100%}.cta .btn{flex:1}}
+@media(max-width:600px){.cc .b{padding:12px}.cc h3{font-size:.86rem}.cc p{font-size:.72rem}.wc{padding:18px 12px}.cta-row .btn{flex:1 1 auto}.wood{border-radius:14px}}
+@media(max-width:360px){.brand svg{display:none}.nr .btn{padding:6px 10px}.cg,.wy{grid-template-columns:1fr}}
+@media(max-width:860px){#hstrip{display:none}.hero{padding-bottom:48px}#about.after{padding-top:var(--sp)}.nr .btn{display:none}}
+@media(max-width:600px){body{font-size:14px}h1{font-size:clamp(1.5rem,6.6vw,1.85rem)}h2{font-size:1.3rem}h3{font-size:.9rem}.ars{font-size:1.25rem}.hero p.lead{font-size:.8rem;margin:12px 0 20px}.btn{min-height:42px;padding:8px 18px;font-size:.78rem}.hc .btn{flex:1 1 0;padding:8px 10px;white-space:nowrap}.head{margin-bottom:22px}.head p,.ab p{font-size:.82rem}.lbl{font-size:.7rem}.wc h3{font-size:.82rem}.wc p{font-size:.72rem}.si b{font-size:.7rem}.pts{font-size:.8rem}.faq summary{font-size:.84rem;min-height:50px;padding:12px 14px}.faq p{font-size:.82rem}.sc h3{font-size:.8rem}.sc p{font-size:.76rem}.sc .ic{width:44px;height:44px;padding:11px}.ar{font-size:1.6rem}.verse blockquote{font-size:.95rem}.cta h2{font-size:1.05rem}.cta .ci{width:44px;height:44px}input,select{min-height:44px}.bn a{font-size:.58rem}.bn .c span{width:46px;height:46px}.bn .c{margin-top:-22px}footer{font-size:.8rem}.ni{height:50px}.brand{font-size:.7rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style></head>
+<body>
+<nav class="nav" id="nav" aria-label="Main"><div class="ni">
+<a href="#home" class="brand" aria-label="Al Furqan Online Academy home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#064B3B"/><path d="M20 10c-3-2-7-2-10-1v19c3-1 7-1 10 1 3-2 7-2 10-1V9c-3-1-7-1-10 1z" fill="none" stroke="#F5B900" stroke-width="1.8" stroke-linejoin="round"/><path d="M20 10v19" stroke="#F5B900" stroke-width="1.8"/></svg><span>AL FURQAN <i>ONLINE ACADEMY</i></span></a>
+<div class="menu" id="menu"><a href="#home">Home</a><a href="#about">About</a><a href="#courses">Courses</a><a href="#how">How It Works</a><a href="#faq">FAQ</a></div>
+<div class="nr"><a href="#register" class="btn b-g">Register Now <svg class="ic" viewBox="0 0 24 24" data-ic="arrow"></svg></a><button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+</div></nav>
+
+<header class="hero" id="home">
+<div class="hbg ph" data-img="hero" data-alt="A student reading the Qur’an during an online lesson" data-eager></div><div class="ov"></div>
+<div class="top"><div class="wrap"><span><a href="tel:+2349122068094"><svg class="ic" viewBox="0 0 24 24" data-ic="phone"></svg>+234 9122068094</a><a class="em" href="mailto:hassanmustaqeem001@gmail.com"><svg class="ic" viewBox="0 0 24 24" data-ic="mail"></svg>hassanmustaqeem001@gmail.com</a></span><a class="wa-c" data-wa aria-label="Chat on WhatsApp"><svg class="ic" viewBox="0 0 24 24" data-ic="chat"></svg></a></div></div>
+<div class="wrap"><div class="hc">
+<span class="ars" lang="ar" dir="rtl">وَقُلْ رَبِّ زِدْنِي عِلْمًا</span>
+<h1>Learn the Qur’an,<br>Read with Purpose,<br><span class="hl">Grow with Faith.</span></h1>
+<p class="lead">Learn the Qur’an from the comfort of your home through guided Quran reading, Tajweed, memorisation and Islamic learning.</p>
+<div class="cta-row"><a href="#register" class="btn b-g">Register Now <svg class="ic" viewBox="0 0 24 24" data-ic="arrow"></svg></a><a href="#courses" class="btn b-y">Our Courses <svg class="ic" viewBox="0 0 24 24" data-ic="arrow"></svg></a></div>
+</div></div>
+<div class="strip ovl" id="hstrip"></div>
+</header>
+
+<main>
+<section id="about" class="after"><div class="wrap ab">
+<div><span class="lbl">About Al Furqan</span><h2>Building a Stronger Connection With the <span class="hl">Qur’an</span></h2>
+<p>Al Furqan Online Academy is an online Quran learning platform designed to make Quran education accessible from the comfort of home. Our lessons focus on helping students read, recite, memorise and learn essential Islamic teachings with consistency and understanding.</p>
+<div class="pts" id="pts"></div><a href="#how" class="btn b-g">Read More About Us <svg class="ic" viewBox="0 0 24 24" data-ic="arrow"></svg></a></div>
+<div class="ph" data-img="about" data-alt="Qur’an resting on a wooden rehal in warm light"></div>
+</div></section>
+
+<section class="pale why"><div class="wrap">
+<div class="head"><span class="lbl">Why choose us?</span><h2>A Better Way to Learn the <span class="hl">Qur’an</span></h2></div>
+<div class="wy" id="wy"></div></div>
+<div class="strip ovl" id="vstrip"></div></section>
+
+<section id="courses" class="after"><div class="wrap">
+<div class="head"><span class="lbl">Our courses</span><h2>Courses We <span class="hl">Offer</span></h2></div>
+<div class="cg" id="cg"></div></div></section>
+
+<section class="pale qs" id="quran"><div class="wrap">
+<div class="head"><span class="lbl">Interactive Qur’an</span><h2>Open the <span class="hl">Qur’an</span></h2><p>Take a moment to explore the pages of the Qur’an and begin your journey of learning.</p></div>
+<div class="wood"><div class="stage"><div class="book" id="book" tabindex="0" role="group" aria-roledescription="page-turning Qur’an" aria-label="Interactive Qur’an. Use left and right arrow keys, swipe, or the buttons to turn pages."></div></div></div>
+<div class="ctl"><button id="nextP" aria-label="Turn to next page"><svg class="ic" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><span id="pgInfo" aria-live="polite">Pages 1–2</span><button id="prevP" aria-label="Turn to previous page"><svg class="ic" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
+</div></section>
+
+<section id="how"><div class="wrap"><div class="hw">
+<div class="head"><span class="lbl" style="color:var(--gold)">How it works</span><h2>Start Your Quran Learning Journey in <span style="color:var(--gold)">3 Simple Steps</span></h2></div>
+<div class="sg" id="sg"></div></div></div></section>
+
+<section class="verse"><div class="wrap">
+<p class="ar" lang="ar" dir="rtl">إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ</p>
+<blockquote>“Indeed, We have sent down the Reminder, and indeed We will preserve it.”</blockquote>
+<p>— Qur’an 15:9</p></div></section>
+
+<section id="register" class="pale"><div class="wrap">
+<div class="head"><span class="lbl">Registration</span><h2>Begin Your Qur’an <span class="hl">Journey</span></h2><p>Take the first step toward learning the Qur’an from the comfort of your home.</p></div>
+<div class="fb" id="formbox">
+
+<form id="reg" action="https://formspree.io/f/xbglgave" method="POST" novalidate>
+<input type="hidden" name="_subject" value="New Al Furqan Online Academy Registration">
+<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+<div class="fgd">
+<div><label for="name">Full Name *</label><input id="name" name="name" required autocomplete="name"></div>
+<div><label for="age">Age *</label><input id="age" name="age" type="number" min="3" max="99" inputmode="numeric" required></div>
+<div><label for="country">Country *</label><input id="country" name="country" required autocomplete="country-name"></div>
+<div><label for="whatsapp">WhatsApp Number *</label><input id="whatsapp" name="whatsapp" type="tel" required autocomplete="tel" placeholder="+234…"></div>
+<div class="full"><label for="email">Email Address *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+<div><label for="course">Course *</label><select id="course" name="course" required><option value="">Select a course</option></select></div>
+<div><label for="level">Current Quran Level *</label><select id="level" name="level" required><option value="">Select your level</option><option>Beginner</option><option>Can Read Quran</option><option>Intermediate</option><option>Advanced</option></select></div>
+<div class="full"><label for="message">Additional Message</label><textarea id="message" name="message"></textarea></div>
+<div class="full"><label class="chk"><input type="checkbox" name="consent" value="yes" required><span>I agree to be contacted by Al Furqan Online Academy regarding my registration.</span></label></div>
+<div class="full"><button class="btn b-g" type="submit">Complete Registration</button></div>
+</div>
+<div id="ferr" class="err" role="alert" hidden></div>
+</form></div></div></section>
+
+<section id="faq"><div class="wrap">
+<div class="head"><span class="lbl">FAQ</span><h2>Frequently Asked <span class="hl">Questions</span></h2></div>
+<div class="faq" id="faqList"></div></div></section>
+
+<div class="cta"><div class="wrap"><div class="l"><span class="ci"><svg class="ic" viewBox="0 0 24 24" data-ic="book"></svg></span><div><h2>Ready to Read, Recite &amp; Rise?</h2><p>Begin your Quran learning journey from the comfort of your home.</p></div></div>
+<div class="cta-row"><a href="#register" class="btn b-g">Register Now</a><a href="#courses" class="btn b-o" style="border-color:#1a1400;color:#1a1400">Our Courses</a></div></div></div>
+</main>
+
+<footer><div class="wrap"><div class="f4">
+<div><a href="#home" class="brand">AL FURQAN&nbsp;<i>ONLINE ACADEMY</i></a><p>Online Quran learning through reading, Tajweed, memorisation, basic Islamic duas and Hadith.</p><p class="fa" lang="ar" dir="rtl">أكاديمية القرآن عبر الإنترنت</p><p style="margin-top:8px;letter-spacing:.14em;color:var(--gold)">READ • RECITE • RISE</p></div>
+<div><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#courses">Courses</a></li><li><a href="#how">How It Works</a></li><li><a href="#faq">FAQ</a></li><li><a href="#register">Register</a></li></ul></div>
+<div><h4>Courses</h4><ul id="fcourses"></ul></div>
+<div><h4>Contact</h4><ul><li><a data-wa href="#">WhatsApp: +234 9122068094</a></li><li><a href="mailto:hassanmustaqeem001@gmail.com">hassanmustaqeem001@gmail.com</a></li></ul></div>
+</div><p class="copy">© 2026 Al Furqan Online Academy. All rights reserved.</p></div></footer>
+
+<nav class="bn" aria-label="Quick navigation">
+<a href="#home"><svg class="ic" viewBox="0 0 24 24" data-ic="home"></svg>Home</a><a href="#courses"><svg class="ic" viewBox="0 0 24 24" data-ic="book"></svg>Courses</a>
+<a href="#register" class="c"><span><svg class="ic" viewBox="0 0 24 24" data-ic="form"></svg></span>Register</a>
+<a href="#about"><svg class="ic" viewBox="0 0 24 24" data-ic="user"></svg>About</a><a data-wa href="#"><svg class="ic" viewBox="0 0 24 24" data-ic="chat"></svg>WhatsApp</a></nav>
+
+<script>
+/* ============ CONFIGURATION — edit here ============ */
+const ACADEMY_NAME="Al Furqan Online Academy", ARABIC_NAME="أكاديمية القرآن عبر الإنترنت", TAGLINE="READ • RECITE • RISE";
+const WHATSAPP_NUMBER="+234 9122068094", WHATSAPP_URL="https://wa.me/2349122068094";
+const ACADEMY_EMAIL="hassanmustaqeem001@gmail.com";   // also appears in two mailto: links and the top bar/footer text
+const WHATSAPP_GROUP_URL="YOUR_WHATSAPP_GROUP_LINK";
+const FORMSPREE_ENDPOINT="https://formspree.io/f/xbglgave";
+/* Quran page-flip (pages live in assets/quran-pages/page-001.jpg …) */
+const TOTAL_QURAN_PAGES=6;
+const AUTO_FLIP_ENABLED=true;
+const AUTO_FLIP_DELAY=5500;
+const AUTO_RESUME_DELAY=10000;
+const PAGE_FLIP_DURATION=1400;
+const AUTO_TURNS_PER_CYCLE=5;
+const QURAN_PAGES_DIR="assets/quran-pages/";
+/* Photos — replace with your own files */
+const IMAGES={hero:"assets/images/hero.jpg",about:"assets/images/about.jpg",memorisation:"assets/images/course-memorisation.jpg",tajweed:"assets/images/course-tajweed.jpg",duas:"assets/images/course-duas.jpg",hadith:"assets/images/course-hadith.jpg"};
+/* Courses — exactly four */
+const COURSES=[
+{t:"Quran Memorisation",d:"Build consistency in memorising and revising the Qur’an through guided learning.",img:"memorisation"},
+{t:"Quran Reading with Tajweed",d:"Improve Quran reading, pronunciation and Tajweed through guided practice.",img:"tajweed"},
+{t:"Basic Islamic Duas",d:"Learn essential duas and supplications for everyday Muslim life.",img:"duas"},
+{t:"Hadith",d:"Explore selected teachings and guidance from the sayings of the Prophet ﷺ.",img:"hadith"}];
+/* ================================================== */
+const P={book:"M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z",laptop:"M3 5h18v11H3z M2 19h20",layers:"M12 3 3 8l9 5 9-5z M3 13l9 5 9-5",user:"M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 21a8 8 0 0 1 16 0",users:"M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M3 20a6 6 0 0 1 12 0 M17 11a3 3 0 1 0 0-6 M18 14a6 6 0 0 1 3 6",star:"M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z",scroll:"M8 3h11v14a4 4 0 0 1-4 4H6a3 3 0 0 0 3-3V6a3 3 0 0 0-1-3z M5 3a2 2 0 0 0-2 2v2h5",chat:"M21 12a8 8 0 0 1-11.5 7L4 20l1.2-4.4A8 8 0 1 1 21 12z",arrow:"M5 12h14 M13 6l6 6-6 6",check:"M5 12l5 5 9-10",form:"M6 3h9l4 4v14H6z M9 12h7 M9 16h7",mic:"M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z M6 11a6 6 0 0 0 12 0 M12 17v4",home:"M3 11l9-8 9 8 M5 10v10h14V10",phone:"M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z",mail:"M3 5h18v14H3z M3 6l9 7 9-7"};
+const ic=n=>`<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="${P[n]}"/></svg>`;
+const $=s=>document.querySelector(s);
+const imgTag=(k,alt,eager)=>`<img src="${IMAGES[k]}" alt="${alt}" ${eager?'fetchpriority="high"':'loading="lazy"'} decoding="async" onerror="this.remove()">`;
+document.querySelectorAll("[data-img]").forEach(e=>{const k=e.dataset.img;e.dataset.l="Add photo: "+IMAGES[k];e.innerHTML=imgTag(k,e.dataset.alt,"eager" in e.dataset)});
+document.querySelectorAll("[data-ic]").forEach(e=>e.innerHTML=`<path d="${P[e.dataset.ic]}"/>`);
+document.querySelectorAll("[data-wa]").forEach(a=>{a.href=WHATSAPP_URL;a.target="_blank";a.rel="noopener"});
+const groupOK=!WHATSAPP_GROUP_URL.startsWith("YOUR_");
+const wireGroup=()=>document.querySelectorAll("[data-group]").forEach(a=>{a.href=groupOK?WHATSAPP_GROUP_URL:"#register";if(!groupOK)a.removeAttribute("target")});
+const strip=a=>a.map(([i,t,d])=>`<div class="si"><span class="i">${ic(i)}</span><span><b>${t}</b><small>${d}</small></span></div>`).join("");
+$("#hstrip").innerHTML=strip([["book","Quran Memorisation","Guided memorising and revision"],["mic","Quran Reading & Tajweed","Clear recitation and pronunciation"],["star","Basic Islamic Duas","Everyday duas and supplications"],["scroll","Hadith","Selected teachings of the Prophet ﷺ"]]);
+$("#vstrip").innerHTML=strip([["book","Quran Focused","Learning centred around the Qur’an"],["laptop","Online Learning","Learn from the comfort of home"],["layers","4 Courses","Focused learning pathways"],["user","Personalised Support","Guidance throughout your learning journey"]]);
+$("#pts").innerHTML=["Quran-Focused Learning","Guided Practice","Personalised Learning","Supportive Environment"].map(t=>`<span><i>${ic("check")}</i>${t}</span>`).join("");
+$("#wy").innerHTML=[["book","Quran-Focused Learning","Lessons centred on reading, reciting and understanding the Qur’an."],["users","Guided Learning","Practise with a teacher guiding your reading and recitation."],["laptop","Flexible Online Access","Join your lessons online from wherever you are."],["user","Personalised Attention","Guidance that follows each student's current level."]].map(([i,t,d])=>`<div class="wc rv">${ic(i)}<h3>${t}</h3><p>${d}</p></div>`).join("");
+$("#cg").innerHTML=COURSES.map(c=>`<a href="#register" class="cc rv" data-course="${c.t}"><div class="ph" data-l="Add photo: ${IMAGES[c.img]}">${imgTag(c.img,c.t+" course")}</div><div class="b"><h3>${c.t}</h3><p>${c.d}</p><span class="mo">Learn More ${ic("arrow")}</span></div></a>`).join("");
+$("#course").innerHTML+=COURSES.map(c=>`<option>${c.t}</option>`).join("");
+$("#fcourses").innerHTML=COURSES.map(c=>`<li><a href="#courses">${c.t}</a></li>`).join("");
+$("#sg").innerHTML=[["form","Register","Complete the registration form."],["check","Confirmation","Receive confirmation after your registration is submitted."],["chat","Join WhatsApp","Join the WhatsApp group to receive further information, class arrangements and fee details."]].map(([i,t,d],n)=>`<div class="sc rv"><span class="n">${n+1}</span>${ic(i)}<div><h3>${t}</h3><p>${d}</p></div></div>`).join("");
+$("#faqList").innerHTML=[["Who can join Al Furqan Online Academy?","Children, beginners and adults can register according to their current learning level."],["Do I need previous Quran knowledge?","No. Students can register according to their current level and receive appropriate guidance."],["Are the classes online?","Yes. Lessons are conducted online so students can learn from the comfort of home."],["Are the classes free?","No. The classes are paid. Fee and payment details will be discussed through the academy's WhatsApp group after registration."],["Can I choose my class time?","Class times are fixed by the teacher. Students will receive their schedule and class information after registration."],["What happens after I register?","Your registration will be submitted through the form. You will receive a confirmation and can join the WhatsApp group for further information."]].map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join("");
+wireGroup();
+const nav=$("#nav"),menu=$("#menu"),burger=$("#burger");
+addEventListener("scroll",()=>nav.classList.toggle("sc",scrollY>30),{passive:true});
+burger.onclick=()=>{const o=menu.classList.toggle("open");burger.setAttribute("aria-expanded",o);burger.setAttribute("aria-label",o?"Close menu":"Open menu")};
+menu.addEventListener("click",e=>{if(e.target.closest("a")){menu.classList.remove("open");burger.setAttribute("aria-expanded","false")}});
+document.querySelectorAll("[data-course]").forEach(c=>c.addEventListener("click",()=>{$("#course").value=c.dataset.course}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+
+/* ============ Interactive Qur’an (right-to-left page flip) ============ */
+(()=>{
+const book=$("#book"),reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+const P_=Math.max(2,TOTAL_QURAN_PAGES),L=Math.floor(P_/2)+1;
+const face=(n,back)=>{
+ if(n<1||n>P_)return `<div class="face${back?" bk":""}"><i></i></div>`;
+ const f=String(n).padStart(3,"0"),eager=n<=6?"":'loading="lazy"';
+ return `<div class="face${back?" bk":""}"><img src="${QURAN_PAGES_DIR}page-${f}.jpg" alt="Qur’an page ${n}" ${eager} decoding="async" onerror="this.remove();this.parentNode.classList.add('m')"><div class="miss">Page ${n}<br>Add ${QURAN_PAGES_DIR}page-${f}.jpg</div><i></i></div>`};
+book.innerHTML=Array.from({length:L},(_,k)=>`<div class="leaf">${face(2*k,false)}${face(2*k+1,true)}</div>`).join("");
+const leaves=[...book.children];let k=1,busy=false,dragging=false,auto=0,tAuto,tRes,visible=false;
+const p=new Array(L).fill(0);
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+function set(i,v){p[i]=v;const l=leaves[i],a=180*v;l.style.transform=`rotateY(${a}deg)`;const s=Math.sin(Math.PI*v)*.45;l.style.setProperty("--s",s.toFixed(3));l.querySelectorAll("i").forEach(x=>x.style.setProperty("--s",s.toFixed(3)))}
+function stack(){leaves.forEach((l,i)=>{l.style.zIndex=p[i]>=.5?i:L-i});}
+function info(){const r=2*k-1,l=2*k;$("#pgInfo").textContent=`Pages ${Math.min(r,P_)}–${Math.min(l,P_)}`}
+function anim(i,from,to,ms,done){const t0=performance.now();leaves[i].style.zIndex=999;busy=true;
+ (function f(t){const u=Math.min(1,(t-t0)/(reduce?1:ms));set(i,from+(to-from)*ease(u));if(u<1)requestAnimationFrame(f);else{busy=false;stack();done&&done()}})(t0)}
+function turn(dir,ms=PAGE_FLIP_DURATION,done){if(busy)return;
+ if(dir>0&&k<L){const i=k;k++;info();anim(i,p[i],1,ms,done)}
+ else if(dir<0&&k>1){const i=k-1;k--;info();anim(i,p[i],0,ms,done)}}
+leaves.forEach((_,i)=>set(i,i<k?1:0));stack();info();
+/* auto flip */
+function sched(){clearTimeout(tAuto);if(!AUTO_FLIP_ENABLED||reduce||!visible||dragging||auto>=AUTO_TURNS_PER_CYCLE||k>=L)return;
+ tAuto=setTimeout(()=>{turn(1,PAGE_FLIP_DURATION*1.3,()=>{auto++;sched()})},AUTO_FLIP_DELAY)}
+function touch(){clearTimeout(tAuto);clearTimeout(tRes);tRes=setTimeout(()=>{auto=0;sched()},AUTO_RESUME_DELAY)}
+new IntersectionObserver(e=>{visible=e[0].isIntersecting;visible?sched():clearTimeout(tAuto)},{threshold:.4}).observe(book);
+/* drag / tap */
+let sx=0,dir=0,idx=0,moved=false,pid=null;
+book.addEventListener("pointerdown",e=>{if(busy||e.button>0)return;touch();const r=book.getBoundingClientRect();sx=e.clientX;moved=false;pid=e.pointerId;
+ dir=(e.clientX-r.left)<r.width/2?1:-1;idx=dir>0?k:k-1;if(idx<0||idx>=L)dir=0});
+book.addEventListener("pointermove",e=>{if(e.pointerId!==pid||!dir)return;const dx=e.clientX-sx,w=book.getBoundingClientRect().width/2;
+ if(!moved&&Math.abs(dx)>8){moved=true;dragging=true;book.setPointerCapture(pid);leaves[idx].style.zIndex=999}
+ if(moved){const u=Math.max(0,Math.min(1,Math.abs(dx)/w)),ok=dir>0?dx>0:dx<0;set(idx,dir>0?(ok?u:0):(ok?1-u:1))}});
+function end(e,cancel){if(e.pointerId!==pid)return;pid=null;touch();
+ if(moved&&dir){dragging=false;const v=p[idx],fwd=dir>0,go=fwd?v>.35:v<.65;
+  if(go){fwd?k++:k--;info()}busy=false;anim(idx,v,go?(fwd?1:0):(fwd?0:1),PAGE_FLIP_DURATION*.6)}
+ else if(!moved&&!cancel&&dir)turn(dir,PAGE_FLIP_DURATION*.8);
+ dragging=false;dir=0}
+book.addEventListener("pointerup",e=>end(e));book.addEventListener("pointercancel",e=>end(e,true));
+book.addEventListener("keydown",e=>{if(e.key==="ArrowLeft"){turn(1);touch()}if(e.key==="ArrowRight"){turn(-1);touch()}});
+$("#nextP").onclick=()=>{turn(1);touch()};$("#prevP").onclick=()=>{turn(-1);touch()};
+})();
+
+/* ============ Registration ============ */
+const form=$("#reg"),box=$("#formbox"),ferr=$("#ferr");
+form.action=FORMSPREE_ENDPOINT;
+form.addEventListener("submit",async e=>{e.preventDefault();ferr.hidden=true;
+ if(!form.checkValidity()){form.reportValidity();return}
+ const st=document.createElement("div");st.className="ok";st.setAttribute("role","status");st.innerHTML='<div class="spin"></div><p>Submitting your registration...</p>';
+ form.hidden=true;box.appendChild(st);
+ try{
+  const r=await fetch(FORMSPREE_ENDPOINT,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});
+  if(!r.ok)throw 0;
+  box.innerHTML=`<div class="ok" role="status"><div class="tick">${ic("check")}</div><h3>Registration Received!</h3><p>JazakAllahu Khayran. Your registration has been received successfully.</p><p>Please join our WhatsApp group for further information, class arrangements and fee details.</p><div class="cta-row"><a data-group class="btn b-g" href="#" target="_blank" rel="noopener">Join WhatsApp Group</a><a class="btn b-o" href="${WHATSAPP_URL}" target="_blank" rel="noopener">Chat With Us on WhatsApp</a></div></div>`;
+  wireGroup();box.scrollIntoView({behavior:"smooth",block:"center"});
+ }catch(_){
+  st.remove();form.hidden=false;ferr.hidden=false;
+  ferr.innerHTML=`We couldn't submit your registration right now. Please try again or <a href="${WHATSAPP_URL}" target="_blank" rel="noopener" style="text-decoration:underline">contact us on WhatsApp</a>.`;
+  }});
+</script>
+</body>
+</html>
