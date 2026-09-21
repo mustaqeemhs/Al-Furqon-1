@@ -29,14 +29,14 @@ section{padding:var(--sp) 0}.after{padding-top:calc(var(--sp) + var(--half))}
 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
 /* hero + header */
 .hero{position:relative;color:#fff;min-height:101vh;min-height:101svh;display:flex;flex-direction:column;justify-content:center;padding:clamp(130px,19vh,190px) 0 calc(var(--half) + 44px);background:var(--gd)}
-.hbg{position:absolute;inset:0}.ov{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(4,58,47,.9) 0,rgba(4,58,47,.78) 34%,rgba(4,58,47,.4) 54%,transparent 74%),linear-gradient(180deg,rgba(3,28,23,.45) 0,transparent 16%)}
+.hbg{position:absolute;inset:0}.ov{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 72% 62%,rgba(245,185,0,.12),transparent 55%),linear-gradient(90deg,rgba(4,58,47,.93) 0,rgba(4,58,47,.72) 45%,rgba(4,58,47,.3) 100%),linear-gradient(180deg,rgba(3,28,23,.7) 0,transparent 30%),linear-gradient(0deg,rgba(4,58,47,.88) 0,transparent 42%)}
 .hbg img{object-position:50% 56%;transform-origin:60% 58%;animation:kb 26s ease-in-out infinite alternate}@keyframes kb{to{transform:scale(1.07)}}
 .hero .wrap{position:relative;z-index:3}
 .top{position:absolute;top:0;left:0;right:0;z-index:5;font-size:.72rem;color:#e7efe9}.top .wrap{display:flex;justify-content:space-between;align-items:center;height:42px}
 .top a{display:inline-flex;gap:6px;align-items:center;margin-right:18px}.top .ic{width:14px;height:14px;color:var(--gold)}
 .top .wa-c{width:26px;height:26px;border-radius:50%;background:var(--gold);justify-content:center;margin:0}.top .wa-c .ic{color:var(--gd)}
 .nav{position:fixed;top:46px;left:0;right:0;margin:0 auto;width:min(var(--w),100% - 2*var(--pad));z-index:60;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.18);transition:top .3s}
-.nav.sc{top:10px}
+.nav.is-scrolled{top:10px}
 .ni{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 14px 0 20px;gap:12px}
 .brand{display:flex;align-items:center;gap:9px;font-weight:700;color:var(--g);font-size:.95rem;letter-spacing:.03em;line-height:1.1}.brand svg{width:34px;height:34px;flex:none}.brand i{font-style:normal;color:var(--acc)}
 .menu{display:flex;gap:26px;font-size:.85rem;font-weight:500}.menu a:hover{color:var(--acc)}
@@ -140,7 +140,6 @@ footer .brand{color:#fff;margin-bottom:10px}footer .brand i{color:var(--gold)}.f
 .vp .dv::after{content:"";position:absolute;left:50%;top:50%;width:1.8cqw;height:1.8cqw;background:#C49A45;transform:translate(-50%,-50%) rotate(45deg)}
 .vp .ve{font:italic 500 4.3cqw/1.55 Poppins,sans-serif;color:#3b4a44}
 .vp .vr{font:600 3.2cqw Poppins,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#87603F;margin-top:3.5cqw}
-@media(min-width:861px){.top{position:fixed;z-index:59;transition:background .3s}body.sc .top{background:var(--gd)}body.sc .nav{top:46px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 </style></head>
 <body>
@@ -244,7 +243,7 @@ const ACADEMY_EMAIL="hassanmustaqeem001@gmail.com";   // also appears in two mai
 const WHATSAPP_GROUP_URL="YOUR_WHATSAPP_GROUP_LINK";
 const FORMSPREE_ENDPOINT="https://formspree.io/f/xbglgave";
 /* Quran page-flip (pages live in assets/quran-pages/page-001.jpg …) */
-const TOTAL_QURAN_PAGES=8;
+const TOTAL_QURAN_PAGES=8;      // number of scans (page-001.jpg…). The verse page and a blank page are added in front automatically
 const AUTO_FLIP_ENABLED=true;
 const AUTO_FLIP_DELAY=1000;    // ms rest between turns
 const AUTO_RESUME_DELAY=3000; // ms after a visitor lets go before auto-turning resumes
@@ -279,7 +278,7 @@ $("#sg").innerHTML=[["form","Register","Complete the registration form."],["chec
 $("#faqList").innerHTML=[["Who can join Al Furqan Online Academy?","Children, beginners and adults can register according to their current learning level."],["Do I need previous Quran knowledge?","No. Students can register according to their current level and receive appropriate guidance."],["Are the classes online?","Yes. Lessons are conducted online so students can learn from the comfort of home."],["Are the classes free?","No. The classes are paid. Fee and payment details will be discussed through the academy's WhatsApp group after registration."],["Can I choose my class time?","Class times are fixed by the teacher. Students will receive their schedule and class information after registration."],["What happens after I register?","Your registration will be submitted through the form. You will receive a confirmation and can join the WhatsApp group for further information."]].map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join("");
 wireGroup();
 const nav=$("#nav"),menu=$("#menu"),burger=$("#burger");
-addEventListener("scroll",()=>{const o=scrollY>30;nav.classList.toggle("sc",o);document.body.classList.toggle("sc",o)},{passive:true});
+addEventListener("scroll",()=>nav.classList.toggle("is-scrolled",scrollY>30),{passive:true});
 burger.onclick=()=>{const o=menu.classList.toggle("open");burger.setAttribute("aria-expanded",o);burger.setAttribute("aria-label",o?"Close menu":"Open menu")};
 menu.addEventListener("click",e=>{if(e.target.closest("a")){menu.classList.remove("open");burger.setAttribute("aria-expanded","false")}});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
@@ -291,10 +290,10 @@ const book=$("#book"),reduce=matchMedia("(prefers-reduced-motion:reduce)").match
 const SC=Math.max(2,TOTAL_QURAN_PAGES),P_=SC+2,L=Math.floor(P_/2)+1;
 const face=(n,back)=>{
  if(n<1||n>P_)return `<div class="face${back?" bk":""}"><i></i></div>`;
- if(n===SC+1)return `<div class="face vp${back?" bk":""}"><p class="va" lang="ar" dir="rtl">إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ<br>وَإِنَّا لَهُ لَحَافِظُونَ</p><b class="dv"></b><p class="ve">“Indeed, We have sent down the Reminder, and indeed We will preserve it.”</p><p class="vr">Qur’an 15:9</p><i></i></div>`;
- if(n>SC)return `<div class="face${back?" bk":""}"><i></i></div>`;
- const f=String(n).padStart(3,"0"),eager=n<=6?"":'loading="lazy"';
- return `<div class="face${back?" bk":""}"><img src="${QURAN_PAGES_DIR}page-${f}.jpg" alt="Qur’an page ${n}" ${eager} decoding="async" onerror="this.remove();this.parentNode.classList.add('m')"><div class="miss">Page ${n}<br>Add ${QURAN_PAGES_DIR}page-${f}.jpg</div><i></i></div>`};
+ if(n===1)return `<div class="face vp${back?" bk":""}"><p class="va" lang="ar" dir="rtl">إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ<br>وَإِنَّا لَهُ لَحَافِظُونَ</p><b class="dv"></b><p class="ve">“Indeed, We have sent down the Reminder, and indeed We will preserve it.”</p><p class="vr">Qur’an 15:9</p><i></i></div>`;
+ if(n===2||n-2>SC)return `<div class="face${back?" bk":""}"><i></i></div>`;
+ const q=n-2,f=String(q).padStart(3,"0"),eager=q<=6?"":'loading="lazy"';
+ return `<div class="face${back?" bk":""}"><img src="${QURAN_PAGES_DIR}page-${f}.jpg" alt="Qur’an page ${q}" ${eager} decoding="async" onerror="this.remove();this.parentNode.classList.add('m')"><div class="miss">Page ${q}<br>Add ${QURAN_PAGES_DIR}page-${f}.jpg</div><i></i></div>`};
 book.innerHTML=Array.from({length:L},(_,k)=>`<div class="leaf">${face(2*k,false)}${face(2*k+1,true)}</div>`).join("");
 const leaves=[...book.children];let k=1,busy=false,dragging=false,auto=0,tAuto,tRes,visible=false;
 const p=new Array(L).fill(0);
