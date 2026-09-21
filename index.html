@@ -29,7 +29,7 @@ section{padding:var(--sp) 0}.after{padding-top:calc(var(--sp) + var(--half))}
 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
 /* hero + header */
 .hero{position:relative;color:#fff;min-height:101vh;min-height:101svh;display:flex;flex-direction:column;justify-content:center;padding:clamp(130px,19vh,190px) 0 calc(var(--half) + 44px);background:var(--gd)}
-.hbg{position:absolute;inset:0}.ov{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 72% 62%,rgba(245,185,0,.12),transparent 55%),linear-gradient(90deg,rgba(4,58,47,.93) 0,rgba(4,58,47,.72) 45%,rgba(4,58,47,.3) 100%),linear-gradient(180deg,rgba(3,28,23,.7) 0,transparent 30%),linear-gradient(0deg,rgba(4,58,47,.88) 0,transparent 42%)}
+.hbg{position:absolute;inset:0}.ov{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(4,58,47,.9) 0,rgba(4,58,47,.78) 34%,rgba(4,58,47,.4) 54%,transparent 74%),linear-gradient(180deg,rgba(3,28,23,.45) 0,transparent 16%)}
 .hbg img{object-position:50% 56%;transform-origin:60% 58%;animation:kb 26s ease-in-out infinite alternate}@keyframes kb{to{transform:scale(1.07)}}
 .hero .wrap{position:relative;z-index:3}
 .top{position:absolute;top:0;left:0;right:0;z-index:5;font-size:.72rem;color:#e7efe9}.top .wrap{display:flex;justify-content:space-between;align-items:center;height:42px}
@@ -132,6 +132,15 @@ footer .brand{color:#fff;margin-bottom:10px}footer .brand i{color:var(--gold)}.f
 @media(max-width:360px){.brand svg{display:none}.nr .btn{padding:6px 10px}.cg,.wy{grid-template-columns:1fr}}
 @media(max-width:860px){#hstrip{display:none}.hbg img{object-position:50% 42%}.ov{background:linear-gradient(180deg,rgba(3,28,23,.78) 0,rgba(4,58,47,.66) 40%,rgba(4,58,47,.9) 100%)}.hero{padding-bottom:48px}#about.after{padding-top:var(--sp)}.nr .btn{display:none}}
 @media(max-width:600px){body{font-size:14px}h1{font-size:clamp(1.5rem,6.6vw,1.85rem)}h2{font-size:1.3rem}h3{font-size:.9rem}.ars{font-size:1.25rem}.hero p.lead{font-size:.8rem;margin:12px 0 20px}.btn{min-height:42px;padding:8px 18px;font-size:.78rem}.hc .btn{flex:1 1 0;padding:8px 10px;white-space:nowrap}.head{margin-bottom:22px}.head p,.ab p{font-size:.82rem}.lbl{font-size:.7rem}.wc h3{font-size:.82rem}.wc p{font-size:.72rem}.si b{font-size:.7rem}.pts{font-size:.8rem}.faq summary{font-size:.84rem;min-height:50px;padding:12px 14px}.faq p{font-size:.82rem}.sc h3{font-size:.8rem}.sc p{font-size:.76rem}.sc .ic{width:44px;height:44px;padding:11px}.ar{font-size:1.6rem}.verse blockquote{font-size:.95rem}.cta h2{font-size:1.05rem}.cta .ci{width:44px;height:44px}input,select{min-height:44px}.bn a{font-size:.58rem}.bn .c span{width:46px;height:46px}.bn .c{margin-top:-22px}footer{font-size:.8rem}.ni{height:50px}.brand{font-size:.7rem}}
+[data-img=about] img{object-position:50% 68%}
+.vp{container-type:inline-size;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12%}
+.vp::before{content:"";position:absolute;inset:6%;border:1px solid rgba(135,96,63,.55);outline:1px solid rgba(135,96,63,.3);outline-offset:-5px;pointer-events:none}
+.vp .va{font:400 9.4cqw/1.95 Amiri,serif;color:#064B3B}
+.vp .dv{display:block;width:34%;height:1px;margin:5cqw 0;position:relative;background:linear-gradient(90deg,transparent,#87603F,transparent)}
+.vp .dv::after{content:"";position:absolute;left:50%;top:50%;width:1.8cqw;height:1.8cqw;background:#C49A45;transform:translate(-50%,-50%) rotate(45deg)}
+.vp .ve{font:italic 500 4.3cqw/1.55 Poppins,sans-serif;color:#3b4a44}
+.vp .vr{font:600 3.2cqw Poppins,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#87603F;margin-top:3.5cqw}
+@media(min-width:861px){.top{position:fixed;z-index:59;transition:background .3s}body.sc .top{background:var(--gd)}body.sc .nav{top:46px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 </style></head>
 <body>
@@ -197,8 +206,8 @@ footer .brand{color:#fff;margin-bottom:10px}footer .brand i{color:var(--gold)}.f
 <div><label for="age">Age *</label><input id="age" name="age" type="number" min="3" max="99" inputmode="numeric" required></div>
 <div><label for="country">Country *</label><input id="country" name="country" required autocomplete="country-name"></div>
 <div><label for="whatsapp">WhatsApp Number *</label><input id="whatsapp" name="whatsapp" type="tel" required autocomplete="tel" placeholder="+234…"></div>
-<div class="full"><label for="email">Email Address *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
-<div><label for="course">Course *</label><select id="course" name="course" required><option value="">Select a course</option></select></div>
+<div><label for="email">Email Address *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+
 <div><label for="level">Current Quran Level *</label><select id="level" name="level" required><option value="">Select your level</option><option>Beginner</option><option>Can Read Quran</option><option>Intermediate</option><option>Advanced</option></select></div>
 <div class="full"><label for="message">Additional Message</label><textarea id="message" name="message"></textarea></div>
 <div class="full"><label class="chk"><input type="checkbox" name="consent" value="yes" required><span>I agree to be contacted by Al Furqan Online Academy regarding my registration.</span></label></div>
@@ -245,15 +254,15 @@ const QURAN_PAGES_DIR="assets/quran-pages/";
 const IMAGES={hero:"assets/images/hero.jpg",about:"assets/images/about.jpg",memorisation:"assets/images/course-memorisation.jpg",tajweed:"assets/images/course-tajweed.jpg",duas:"assets/images/course-duas.jpg",hadith:"assets/images/course-hadith.jpg"};
 /* Courses — exactly four */
 const COURSES=[
-{t:"Quran Memorisation",d:"Build consistency in memorising and revising the Qur’an through guided learning.",img:"memorisation"},
-{t:"Quran Reading with Tajweed",d:"Improve Quran reading, pronunciation and Tajweed through guided practice.",img:"tajweed"},
-{t:"Basic Islamic Duas",d:"Learn essential duas and supplications for everyday Muslim life.",img:"duas"},
-{t:"Hadith",d:"Explore selected teachings and guidance from the sayings of the Prophet ﷺ.",img:"hadith"}];
+{t:"Quran Memorisation",d:"Build consistency in memorising and revising the Qur’an through guided learning.",img:"memorisation",pos:"50% 15%"},
+{t:"Quran Reading with Tajweed",d:"Improve Quran reading, pronunciation and Tajweed through guided practice.",img:"tajweed",pos:"30% 35%"},
+{t:"Basic Islamic Duas",d:"Learn essential duas and supplications for everyday Muslim life.",img:"duas",pos:"50% 45%"},
+{t:"Hadith",d:"Explore selected teachings and guidance from the sayings of the Prophet ﷺ.",img:"hadith",pos:"50% 60%"}];
 /* ================================================== */
 const P={book:"M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z",laptop:"M3 5h18v11H3z M2 19h20",layers:"M12 3 3 8l9 5 9-5z M3 13l9 5 9-5",user:"M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 21a8 8 0 0 1 16 0",users:"M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M3 20a6 6 0 0 1 12 0 M17 11a3 3 0 1 0 0-6 M18 14a6 6 0 0 1 3 6",star:"M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z",scroll:"M8 3h11v14a4 4 0 0 1-4 4H6a3 3 0 0 0 3-3V6a3 3 0 0 0-1-3z M5 3a2 2 0 0 0-2 2v2h5",chat:"M21 12a8 8 0 0 1-11.5 7L4 20l1.2-4.4A8 8 0 1 1 21 12z",arrow:"M5 12h14 M13 6l6 6-6 6",check:"M5 12l5 5 9-10",form:"M6 3h9l4 4v14H6z M9 12h7 M9 16h7",mic:"M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z M6 11a6 6 0 0 0 12 0 M12 17v4",home:"M3 11l9-8 9 8 M5 10v10h14V10",phone:"M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z",mail:"M3 5h18v14H3z M3 6l9 7 9-7"};
 const ic=n=>`<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="${P[n]}"/></svg>`;
 const $=s=>document.querySelector(s);
-const imgTag=(k,alt,eager)=>`<img src="${IMAGES[k]}" alt="${alt}" ${eager?'fetchpriority="high"':'loading="lazy"'} decoding="async" onerror="this.remove()">`;
+const imgTag=(k,alt,eager,pos)=>`<img src="${IMAGES[k]}" alt="${alt}" ${pos?`style="object-position:${pos}"`:""} ${eager?'fetchpriority="high"':'loading="lazy"'} decoding="async" onerror="this.remove()">`;
 document.querySelectorAll("[data-img]").forEach(e=>{const k=e.dataset.img;e.dataset.l="Add photo: "+IMAGES[k];e.innerHTML=imgTag(k,e.dataset.alt,"eager" in e.dataset)});
 document.querySelectorAll("[data-ic]").forEach(e=>e.innerHTML=`<path d="${P[e.dataset.ic]}"/>`);
 document.querySelectorAll("[data-wa]").forEach(a=>{a.href=WHATSAPP_URL;a.target="_blank";a.rel="noopener"});
@@ -264,26 +273,26 @@ $("#hstrip").innerHTML=strip([["book","Quran Memorisation","Guided memorising an
 $("#vstrip").innerHTML=strip([["book","Quran Focused","Learning centred around the Qur’an"],["laptop","Online Learning","Learn from the comfort of home"],["layers","4 Courses","Focused learning pathways"],["user","Personalised Support","Guidance throughout your learning journey"]]);
 $("#pts").innerHTML=["Quran-Focused Learning","Guided Practice","Personalised Learning","Supportive Environment"].map(t=>`<span><i>${ic("check")}</i>${t}</span>`).join("");
 $("#wy").innerHTML=[["book","Quran-Focused Learning","Lessons centred on reading, reciting and understanding the Qur’an."],["users","Guided Learning","Practise with a teacher guiding your reading and recitation."],["laptop","Flexible Online Access","Join your lessons online from wherever you are."],["user","Personalised Attention","Guidance that follows each student's current level."]].map(([i,t,d])=>`<div class="wc rv">${ic(i)}<h3>${t}</h3><p>${d}</p></div>`).join("");
-$("#cg").innerHTML=COURSES.map(c=>`<a href="#register" class="cc rv" data-course="${c.t}"><div class="ph" data-l="Add photo: ${IMAGES[c.img]}">${imgTag(c.img,c.t+" course")}</div><div class="b"><h3>${c.t}</h3><p>${c.d}</p><span class="mo">Learn More ${ic("arrow")}</span></div></a>`).join("");
-$("#course").innerHTML+=COURSES.map(c=>`<option>${c.t}</option>`).join("");
+$("#cg").innerHTML=COURSES.map(c=>`<a href="#register" class="cc rv" data-course="${c.t}"><div class="ph" data-l="Add photo: ${IMAGES[c.img]}">${imgTag(c.img,c.t+" course",false,c.pos)}</div><div class="b"><h3>${c.t}</h3><p>${c.d}</p><span class="mo">Learn More ${ic("arrow")}</span></div></a>`).join("");
 $("#fcourses").innerHTML=COURSES.map(c=>`<li><a href="#courses">${c.t}</a></li>`).join("");
 $("#sg").innerHTML=[["form","Register","Complete the registration form."],["check","Confirmation","Receive confirmation after your registration is submitted."],["chat","Join WhatsApp","Join the WhatsApp group to receive further information, class arrangements and fee details."]].map(([i,t,d],n)=>`<div class="sc rv"><span class="n">${n+1}</span>${ic(i)}<div><h3>${t}</h3><p>${d}</p></div></div>`).join("");
 $("#faqList").innerHTML=[["Who can join Al Furqan Online Academy?","Children, beginners and adults can register according to their current learning level."],["Do I need previous Quran knowledge?","No. Students can register according to their current level and receive appropriate guidance."],["Are the classes online?","Yes. Lessons are conducted online so students can learn from the comfort of home."],["Are the classes free?","No. The classes are paid. Fee and payment details will be discussed through the academy's WhatsApp group after registration."],["Can I choose my class time?","Class times are fixed by the teacher. Students will receive their schedule and class information after registration."],["What happens after I register?","Your registration will be submitted through the form. You will receive a confirmation and can join the WhatsApp group for further information."]].map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join("");
 wireGroup();
 const nav=$("#nav"),menu=$("#menu"),burger=$("#burger");
-addEventListener("scroll",()=>nav.classList.toggle("sc",scrollY>30),{passive:true});
+addEventListener("scroll",()=>{const o=scrollY>30;nav.classList.toggle("sc",o);document.body.classList.toggle("sc",o)},{passive:true});
 burger.onclick=()=>{const o=menu.classList.toggle("open");burger.setAttribute("aria-expanded",o);burger.setAttribute("aria-label",o?"Close menu":"Open menu")};
 menu.addEventListener("click",e=>{if(e.target.closest("a")){menu.classList.remove("open");burger.setAttribute("aria-expanded","false")}});
-document.querySelectorAll("[data-course]").forEach(c=>c.addEventListener("click",()=>{$("#course").value=c.dataset.course}));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll(".rv").forEach(e=>io.observe(e));
 
 /* ============ Interactive Qur’an (right-to-left page flip) ============ */
 (()=>{
 const book=$("#book"),reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
-const P_=Math.max(2,TOTAL_QURAN_PAGES),L=Math.floor(P_/2)+1;
+const SC=Math.max(2,TOTAL_QURAN_PAGES),P_=SC+2,L=Math.floor(P_/2)+1;
 const face=(n,back)=>{
  if(n<1||n>P_)return `<div class="face${back?" bk":""}"><i></i></div>`;
+ if(n===SC+1)return `<div class="face vp${back?" bk":""}"><p class="va" lang="ar" dir="rtl">إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ<br>وَإِنَّا لَهُ لَحَافِظُونَ</p><b class="dv"></b><p class="ve">“Indeed, We have sent down the Reminder, and indeed We will preserve it.”</p><p class="vr">Qur’an 15:9</p><i></i></div>`;
+ if(n>SC)return `<div class="face${back?" bk":""}"><i></i></div>`;
  const f=String(n).padStart(3,"0"),eager=n<=6?"":'loading="lazy"';
  return `<div class="face${back?" bk":""}"><img src="${QURAN_PAGES_DIR}page-${f}.jpg" alt="Qur’an page ${n}" ${eager} decoding="async" onerror="this.remove();this.parentNode.classList.add('m')"><div class="miss">Page ${n}<br>Add ${QURAN_PAGES_DIR}page-${f}.jpg</div><i></i></div>`};
 book.innerHTML=Array.from({length:L},(_,k)=>`<div class="leaf">${face(2*k,false)}${face(2*k+1,true)}</div>`).join("");
@@ -296,21 +305,21 @@ function info(){const r=2*k-1,l=2*k;$("#pgInfo").textContent=`Pages ${Math.min(r
 function anim(i,from,to,ms,done){const t0=performance.now();leaves[i].style.zIndex=999;busy=true;
  (function f(t){const u=Math.min(1,(t-t0)/(reduce?1:ms));set(i,from+(to-from)*ease(u));if(u<1)requestAnimationFrame(f);else{busy=false;stack();done&&done()}})(t0)}
 function turn(dir,ms=PAGE_FLIP_DURATION,done){if(busy)return;
- if(dir>0&&k<L){const i=k;k++;info();anim(i,p[i],1,ms,done)}
+ if(dir>0&&k<L-1){const i=k;k++;info();anim(i,p[i],1,ms,done)}
  else if(dir<0&&k>1){const i=k-1;k--;info();anim(i,p[i],0,ms,done)}}
 leaves.forEach((_,i)=>set(i,i<k?1:0));stack();info();
 /* auto flip */
 let ad=1;
 function sched(){clearTimeout(tAuto);if(!AUTO_FLIP_ENABLED||reduce||!visible||dragging)return;
  tAuto=setTimeout(()=>{if(busy||dragging){sched();return}
-  if(k>=L)ad=-1;else if(k<=1)ad=1;   /* never stops: reads forward, then back, then forward… */
+  if(k>=L-1)ad=-1;else if(k<=1)ad=1;   /* never stops: reads forward, then back, then forward… */
   turn(ad,PAGE_FLIP_DURATION,sched)},AUTO_FLIP_DELAY)}
 function touch(){clearTimeout(tAuto);clearTimeout(tRes);tRes=setTimeout(()=>{auto=0;sched()},AUTO_RESUME_DELAY)}
 new IntersectionObserver(e=>{visible=e[0].isIntersecting;visible?sched():clearTimeout(tAuto)},{threshold:.4}).observe(book);
 /* drag / tap */
 let sx=0,dir=0,idx=0,moved=false,pid=null;
 book.addEventListener("pointerdown",e=>{if(busy||e.button>0)return;touch();const r=book.getBoundingClientRect();sx=e.clientX;moved=false;pid=e.pointerId;
- dir=(e.clientX-r.left)<r.width/2?1:-1;idx=dir>0?k:k-1;if(idx<0||idx>=L)dir=0});
+ dir=(e.clientX-r.left)<r.width/2?1:-1;idx=dir>0?k:k-1;if(idx<0||idx>=L-1)dir=0});
 book.addEventListener("pointermove",e=>{if(e.pointerId!==pid||!dir)return;const dx=e.clientX-sx,w=book.getBoundingClientRect().width/2;
  if(!moved&&Math.abs(dx)>8){moved=true;dragging=true;book.setPointerCapture(pid);leaves[idx].style.zIndex=999}
  if(moved){const u=Math.max(0,Math.min(1,Math.abs(dx)/w)),ok=dir>0?dx>0:dx<0;set(idx,dir>0?(ok?u:0):(ok?1-u:1))}});
