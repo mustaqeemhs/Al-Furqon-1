@@ -4,6 +4,12 @@
 <title>Al Furqan Online Academy | Online Quran Classes</title>
 <meta name="description" content="Al Furqan Online Academy offers online Quran learning through Quran reading, Tajweed, memorisation, basic Islamic duas and Hadith.">
 <meta name="theme-color" content="#043A2F">
+<link rel="preload" as="image" href="assets/images/hero.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/images/about.jpg">
+<link rel="preload" as="image" href="assets/images/course-memorisation.jpg">
+<link rel="preload" as="image" href="assets/images/course-tajweed.jpg">
+<link rel="preload" as="image" href="assets/images/course-duas.jpg">
+<link rel="preload" as="image" href="assets/images/course-hadith.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -140,12 +146,47 @@ footer .brand{color:#fff;margin-bottom:10px}footer .brand i{color:var(--gold)}.f
 .vp .dv::after{content:"";position:absolute;left:50%;top:50%;width:1.8cqw;height:1.8cqw;background:#C49A45;transform:translate(-50%,-50%) rotate(45deg)}
 .vp .ve{font:italic 500 4.3cqw/1.55 Poppins,sans-serif;color:#3b4a44}
 .vp .vr{font:600 3.2cqw Poppins,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#87603F;margin-top:3.5cqw}
+
+/* hero badge */
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,185,0,.14);border:1px solid rgba(245,185,0,.55);color:var(--gold);font:600 .72rem Poppins;letter-spacing:.05em;padding:8px 14px;border-radius:999px;margin-bottom:16px}
+.badge .ic{width:14px;height:14px}.badge i{font-style:normal;color:#e7dcc0;font-weight:500}
+.b-out{border:2px solid rgba(255,255,255,.7);color:#fff;background:transparent}.b-out:hover{background:rgba(255,255,255,.12)}
+/* registration limited-spots note */
+.spots{max-width:640px;margin:-14px auto 26px;text-align:center;display:flex;gap:8px;align-items:center;justify-content:center;font-size:.84rem;color:var(--brown);background:#fdf3da;border:1px solid #f0dfa8;border-radius:10px;padding:10px 16px}
+.spots .ic{width:16px;height:16px;color:var(--gold);flex:none}
+/* pricing */
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.pc{background:#fff;border:1.5px solid #e4e9e6;border-radius:18px;padding:28px 24px;position:relative;display:flex;flex-direction:column;box-shadow:0 8px 26px rgba(4,58,47,.06)}
+.pc.rec{border-color:var(--gold);border-width:2px;box-shadow:0 20px 44px rgba(4,58,47,.16);transform:translateY(-10px)}
+.pop{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:#1a1400;font:700 .68rem Poppins;letter-spacing:.06em;text-transform:uppercase;padding:6px 16px;border-radius:999px;white-space:nowrap;box-shadow:0 6px 14px rgba(245,185,0,.4)}
+.pb{display:inline-block;align-self:flex-start;font:700 .66rem Poppins;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);background:var(--pale);padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.pc.rec .pb{color:#8a6a00;background:#fff5db}
+.pc h3{font-size:1.06rem}
+.pp{display:flex;align-items:baseline;gap:8px;margin:12px 0 4px}.pp b{font-size:1.9rem;color:var(--g);font-weight:700}.pp small{font-size:.72rem;color:var(--mut);font-weight:600;letter-spacing:.04em}
+.pd{color:var(--mut);font-size:.84rem;margin-bottom:18px;min-height:44px}
+.pc .btn{width:100%;margin-bottom:20px}
+.pf{list-style:none;padding:0;display:grid;gap:10px;flex:1}.pf li{display:flex;gap:9px;align-items:flex-start;font-size:.83rem;color:var(--ink)}.pf li .ic{width:17px;height:17px;color:var(--acc);flex:none;margin-top:1px;stroke-width:2.4}
+.pn{font-size:.76rem;color:var(--mut);margin-top:16px;text-align:center;border-top:1px solid #eef2f0;padding-top:14px}
+/* free-class cta band */
+.fcta-b{max-width:640px;margin:0 auto;text-align:center;background:var(--g);color:#fff;border-radius:22px;padding:clamp(28px,5vw,44px) clamp(20px,5vw,44px);box-shadow:0 20px 44px rgba(4,58,47,.2)}
+.fbadge{display:inline-block;background:var(--gold);color:#1a1400;font:700 .68rem Poppins;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:999px;margin-bottom:16px}
+.fcta-b h2{font-size:clamp(1.3rem,3vw,1.8rem)}.fcta-b p{color:#d6e4de;font-size:.9rem;margin:12px auto 22px;max-width:460px}
+.fdet{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 20px;margin-bottom:26px}.fdet span{display:flex;gap:7px;align-items:center;font-size:.8rem;color:#e6efe9;font-weight:500}.fdet .ic{width:16px;height:16px;color:var(--gold)}
+/* whatsapp companion */
+.wac{padding:0}.wact{background:var(--gd);border-radius:22px;padding:clamp(26px,5vw,44px);color:#fff;text-align:center;max-width:680px;margin:0 auto}
+.wact ul{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin:18px 0 26px;text-align:left;max-width:520px;margin-inline:auto}
+.wact li{display:flex;gap:9px;align-items:center;font-size:.85rem;color:#dbe6e0}.wact li .ic{width:16px;height:16px;color:var(--gold);flex:none}
+.sg4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.pg{grid-template-columns:1fr}.pc.rec{transform:none}.wact ul{grid-template-columns:1fr}}
+@media(max-width:900px){.sg4{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){.badge{font-size:.64rem;padding:7px 12px}.badge i{display:none}}
+@media(max-width:600px){.sg4{grid-template-columns:1fr}.pc{padding:22px 18px}.fcta-b{border-radius:16px}.fdet{gap:8px 14px}.fdet span{font-size:.74rem}.wact{border-radius:16px}.spots{font-size:.78rem;padding:9px 12px;margin-top:-6px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 </style></head>
 <body>
 <nav class="nav" id="nav" aria-label="Main"><div class="ni">
 <a href="#home" class="brand" aria-label="Al Furqan Online Academy home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#064B3B"/><path d="M20 10c-3-2-7-2-10-1v19c3-1 7-1 10 1 3-2 7-2 10-1V9c-3-1-7-1-10 1z" fill="none" stroke="#F5B900" stroke-width="1.8" stroke-linejoin="round"/><path d="M20 10v19" stroke="#F5B900" stroke-width="1.8"/></svg><span>AL FURQAN <i>ONLINE ACADEMY</i></span></a>
-<div class="menu" id="menu"><a href="#home">Home</a><a href="#about">About</a><a href="#courses">Courses</a><a href="#how">How It Works</a><a href="#faq">FAQ</a></div>
+<div class="menu" id="menu"><a href="#home">Home</a><a href="#about">About</a><a href="#courses">Courses</a><a href="#programs">Programs</a><a href="#how">How It Works</a><a href="#faq">FAQ</a></div>
 <div class="nr"><a href="#register" class="btn b-g">Register Now <svg class="ic" viewBox="0 0 24 24" data-ic="arrow"></svg></a><button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
 </div></nav>
 
@@ -153,10 +194,11 @@ footer .brand{color:#fff;margin-bottom:10px}footer .brand i{color:var(--gold)}.f
 <div class="hbg ph" data-img="hero" data-alt="A student reading the Qur’an during an online lesson" data-eager></div><div class="ov"></div>
 <div class="top"><div class="wrap"><span><a href="tel:+2349122068094"><svg class="ic" viewBox="0 0 24 24" data-ic="phone"></svg>+234 9122068094</a><a class="em" href="mailto:hassanmustaqeem001@gmail.com"><svg class="ic" viewBox="0 0 24 24" data-ic="mail"></svg>hassanmustaqeem001@gmail.com</a></span><a class="wa-c" data-wa aria-label="Chat on WhatsApp"><svg class="ic" viewBox="0 0 24 24" data-ic="chat"></svg></a></div></div>
 <div class="wrap"><div class="hc">
+<span class="badge"><svg class="ic" viewBox="0 0 24 24" data-ic="star"></svg>FREE 1-MONTH QURAN CLASS <i>· Starting 10 October 2026</i></span>
 <span class="ars" lang="ar" dir="rtl">وَقُلْ رَبِّ زِدْنِي عِلْمًا</span>
 <h1>Learn the Qur’an,<br>Read with Purpose,<br><span class="hl">Grow with Faith.</span></h1>
 <p class="lead">Learn the Qur’an from the comfort of your home through guided Quran reading, Tajweed, memorisation and Islamic learning.</p>
-<div class="cta-row"><a href="#register" class="btn b-g">Register Now <svg class="ic" viewBox="0 0 24 24" data-ic="arrow"></svg></a><a href="#courses" class="btn b-y">Our Courses <svg class="ic" viewBox="0 0 24 24" data-ic="arrow"></svg></a></div>
+<div class="cta-row"><a href="#register" class="btn b-y">Reserve Free Spot <svg class="ic" viewBox="0 0 24 24" data-ic="arrow"></svg></a><a href="#programs" class="btn b-out">View Programs <svg class="ic" viewBox="0 0 24 24" data-ic="arrow"></svg></a></div>
 </div></div>
 <div class="strip ovl" id="hstrip"></div>
 </header>
@@ -178,15 +220,34 @@ footer .brand{color:#fff;margin-bottom:10px}footer .brand i{color:var(--gold)}.f
 <div class="head"><span class="lbl">Our courses</span><h2>Courses We <span class="hl">Offer</span></h2></div>
 <div class="cg" id="cg"></div></div></section>
 
+<section id="programs" class="after"><div class="wrap">
+<div class="head"><span class="lbl">Programs</span><h2>Choose Your Quran Learning <span class="hl">Path</span></h2><p>Start with our free introductory class, continue with structured group learning, or choose personalised one-to-one guidance.</p></div>
+<div class="pg" id="pg"></div>
+</div></section>
+
+<section class="pale"><div class="wrap"><div class="fcta-b">
+<span class="fbadge">LIMITED SPOTS</span>
+<h2>Start With One Free Month</h2>
+<p>Experience live Quran learning, practise with guidance and build your foundation before deciding whether to continue.</p>
+<div class="fdet" id="fdet"></div>
+<a href="#register" class="btn b-y">Reserve My Free Spot <svg class="ic" viewBox="0 0 24 24" data-ic="arrow"></svg></a>
+</div></div></section>
+
 <section class="pale qs" id="quran"><div class="wrap">
 <div class="head"><span class="lbl">Interactive Qur’an</span><h2>Open the <span class="hl">Qur’an</span></h2><p>Take a moment to explore the pages of the Qur’an and begin your journey of learning.</p></div>
 <div class="wood"><div class="stage"><div class="book" id="book" tabindex="0" role="group" aria-roledescription="page-turning Qur’an" aria-label="Interactive Qur’an. Use left and right arrow keys, swipe, or the buttons to turn pages."></div></div></div>
 <div class="ctl"><button id="nextP" aria-label="Turn to next page"><svg class="ic" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><span id="pgInfo" aria-live="polite">Pages 1–2</span><button id="prevP" aria-label="Turn to previous page"><svg class="ic" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
 </div></section>
 
+<section><div class="wrap wac">
+<div class="wact"><span class="lbl">WhatsApp Group</span><h2>Your Learning <span class="hl">Companion</span></h2>
+<ul id="wacList"></ul>
+<a data-group href="#" target="_blank" rel="noopener" class="btn b-g">Join WhatsApp Group <svg class="ic" viewBox="0 0 24 24" data-ic="chat"></svg></a>
+</div></div></section>
+
 <section id="how"><div class="wrap"><div class="hw">
-<div class="head"><span class="lbl" style="color:var(--gold)">How it works</span><h2>Start Your Quran Learning Journey in <span style="color:var(--gold)">3 Simple Steps</span></h2></div>
-<div class="sg" id="sg"></div></div></div></section>
+<div class="head"><span class="lbl" style="color:var(--gold)">How it works</span><h2>Start Your Quran Learning Journey in <span style="color:var(--gold)">4 Simple Steps</span></h2></div>
+<div class="sg sg4" id="sg"></div></div></div></section>
 
 <section class="verse"><div class="wrap">
 <p class="ar" lang="ar" dir="rtl">إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ</p>
@@ -194,7 +255,8 @@ footer .brand{color:#fff;margin-bottom:10px}footer .brand i{color:var(--gold)}.f
 <p>— Qur’an 15:9</p></div></section>
 
 <section id="register" class="pale"><div class="wrap">
-<div class="head"><span class="lbl">Registration</span><h2>Begin Your Qur’an <span class="hl">Journey</span></h2><p>Take the first step toward learning the Qur’an from the comfort of your home.</p></div>
+<div class="head"><span class="lbl">Registration</span><h2>Reserve Your Free Class <span class="hl">Spot</span></h2><p>Take the first step toward learning the Qur’an from the comfort of your home.</p></div>
+<p class="spots"><svg class="ic" viewBox="0 0 24 24" data-ic="star"></svg>Free class places are limited. Registration is required.</p>
 <div class="fb" id="formbox">
 
 <form id="reg" action="https://formspree.io/f/xbglgave" method="POST" novalidate>
@@ -206,7 +268,7 @@ footer .brand{color:#fff;margin-bottom:10px}footer .brand i{color:var(--gold)}.f
 <div><label for="country">Country *</label><input id="country" name="country" required autocomplete="country-name"></div>
 <div><label for="whatsapp">WhatsApp Number *</label><input id="whatsapp" name="whatsapp" type="tel" required autocomplete="tel" placeholder="+234…"></div>
 <div><label for="email">Email Address *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
-
+<div><label for="course">Course / Learning Interest *</label><select id="course" name="course" required><option value="">Select a course</option></select></div>
 <div><label for="level">Current Quran Level *</label><select id="level" name="level" required><option value="">Select your level</option><option>Beginner</option><option>Can Read Quran</option><option>Intermediate</option><option>Advanced</option></select></div>
 <div class="full"><label for="message">Additional Message</label><textarea id="message" name="message"></textarea></div>
 <div class="full"><label class="chk"><input type="checkbox" name="consent" value="yes" required><span>I agree to be contacted by Al Furqan Online Academy regarding my registration.</span></label></div>
@@ -241,6 +303,9 @@ const ACADEMY_NAME="Al Furqan Online Academy", ARABIC_NAME="أكاديمية ا�
 const WHATSAPP_NUMBER="+234 9122068094", WHATSAPP_URL="https://wa.me/2349122068094";
 const ACADEMY_EMAIL="hassanmustaqeem001@gmail.com";   // also appears in two mailto: links and the top bar/footer text
 const WHATSAPP_GROUP_URL="YOUR_WHATSAPP_GROUP_LINK";
+/* Free class */
+const FREE_START_DATE="10 October 2026", FREE_DAYS="Friday, Saturday & Sunday", FREE_TIME="8:30–9:30 PM WAT", FREE_PLATFORM="Zoom";
+const PRICE_GROUP="₦20,000", PRICE_1TO1="₦50,000";
 const FORMSPREE_ENDPOINT="https://formspree.io/f/xbglgave";
 /* Quran page-flip (pages live in assets/quran-pages/page-001.jpg …) */
 const TOTAL_QURAN_PAGES=8;      // number of scans (page-001.jpg…). The verse page and a blank page are added in front automatically
@@ -250,6 +315,7 @@ const AUTO_RESUME_DELAY=3000; // ms after a visitor lets go before auto-turning 
 const PAGE_FLIP_DURATION=1000; // ms per page turn
 const QURAN_PAGES_DIR="assets/quran-pages/";
 /* Photos — replace with your own files */
+const COURSE_LIST=["Quran Memorisation","Quran Reading with Tajweed","Basic Islamic Duas","Hadith"];
 const IMAGES={hero:"assets/images/hero.jpg",about:"assets/images/about.jpg",memorisation:"assets/images/course-memorisation.jpg",tajweed:"assets/images/course-tajweed.jpg",duas:"assets/images/course-duas.jpg",hadith:"assets/images/course-hadith.jpg"};
 /* Courses — exactly four */
 const COURSES=[
@@ -258,7 +324,7 @@ const COURSES=[
 {t:"Basic Islamic Duas",d:"Learn essential duas and supplications for everyday Muslim life.",img:"duas",pos:"50% 45%"},
 {t:"Hadith",d:"Explore selected teachings and guidance from the sayings of the Prophet ﷺ.",img:"hadith",pos:"50% 60%"}];
 /* ================================================== */
-const P={book:"M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z",laptop:"M3 5h18v11H3z M2 19h20",layers:"M12 3 3 8l9 5 9-5z M3 13l9 5 9-5",user:"M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 21a8 8 0 0 1 16 0",users:"M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M3 20a6 6 0 0 1 12 0 M17 11a3 3 0 1 0 0-6 M18 14a6 6 0 0 1 3 6",star:"M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z",scroll:"M8 3h11v14a4 4 0 0 1-4 4H6a3 3 0 0 0 3-3V6a3 3 0 0 0-1-3z M5 3a2 2 0 0 0-2 2v2h5",chat:"M21 12a8 8 0 0 1-11.5 7L4 20l1.2-4.4A8 8 0 1 1 21 12z",arrow:"M5 12h14 M13 6l6 6-6 6",check:"M5 12l5 5 9-10",form:"M6 3h9l4 4v14H6z M9 12h7 M9 16h7",mic:"M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z M6 11a6 6 0 0 0 12 0 M12 17v4",home:"M3 11l9-8 9 8 M5 10v10h14V10",phone:"M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z",mail:"M3 5h18v14H3z M3 6l9 7 9-7"};
+const P={book:"M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z",laptop:"M3 5h18v11H3z M2 19h20",layers:"M12 3 3 8l9 5 9-5z M3 13l9 5 9-5",user:"M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 21a8 8 0 0 1 16 0",users:"M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M3 20a6 6 0 0 1 12 0 M17 11a3 3 0 1 0 0-6 M18 14a6 6 0 0 1 3 6",star:"M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z",scroll:"M8 3h11v14a4 4 0 0 1-4 4H6a3 3 0 0 0 3-3V6a3 3 0 0 0-1-3z M5 3a2 2 0 0 0-2 2v2h5",chat:"M21 12a8 8 0 0 1-11.5 7L4 20l1.2-4.4A8 8 0 1 1 21 12z",arrow:"M5 12h14 M13 6l6 6-6 6",check:"M5 12l5 5 9-10",form:"M6 3h9l4 4v14H6z M9 12h7 M9 16h7",mic:"M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z M6 11a6 6 0 0 0 12 0 M12 17v4",home:"M3 11l9-8 9 8 M5 10v10h14V10",phone:"M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z",mail:"M3 5h18v14H3z M3 6l9 7 9-7",trend:"M3 17l6-6 4 4 8-8 M15 7h6v6"};
 const ic=n=>`<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="${P[n]}"/></svg>`;
 const $=s=>document.querySelector(s);
 const imgTag=(k,alt,eager,pos)=>`<img src="${IMAGES[k]}" alt="${alt}" ${pos?`style="object-position:${pos}"`:""} ${eager?'fetchpriority="high"':'loading="lazy"'} decoding="async" onerror="this.remove()">`;
@@ -272,10 +338,27 @@ $("#hstrip").innerHTML=strip([["book","Quran Memorisation","Guided memorising an
 $("#vstrip").innerHTML=strip([["book","Quran Focused","Learning centred around the Qur’an"],["laptop","Online Learning","Learn from the comfort of home"],["layers","4 Courses","Focused learning pathways"],["user","Personalised Support","Guidance throughout your learning journey"]]);
 $("#pts").innerHTML=["Quran-Focused Learning","Guided Practice","Personalised Learning","Supportive Environment"].map(t=>`<span><i>${ic("check")}</i>${t}</span>`).join("");
 $("#wy").innerHTML=[["book","Quran-Focused Learning","Lessons centred on reading, reciting and understanding the Qur’an."],["users","Guided Learning","Practise with a teacher guiding your reading and recitation."],["laptop","Flexible Online Access","Join your lessons online from wherever you are."],["user","Personalised Attention","Guidance that follows each student's current level."]].map(([i,t,d])=>`<div class="wc rv">${ic(i)}<h3>${t}</h3><p>${d}</p></div>`).join("");
+$("#course").innerHTML+=COURSE_LIST.map(c=>`<option>${c}</option>`).join("");
 $("#cg").innerHTML=COURSES.map(c=>`<a href="#register" class="cc rv" data-course="${c.t}"><div class="ph" data-l="Add photo: ${IMAGES[c.img]}">${imgTag(c.img,c.t+" course",false,c.pos)}</div><div class="b"><h3>${c.t}</h3><p>${c.d}</p><span class="mo">Learn More ${ic("arrow")}</span></div></a>`).join("");
 $("#fcourses").innerHTML=COURSES.map(c=>`<li><a href="#courses">${c.t}</a></li>`).join("");
-$("#sg").innerHTML=[["form","Register","Complete the registration form."],["check","Confirmation","Receive confirmation after your registration is submitted."],["chat","Join WhatsApp","Join the WhatsApp group to receive further information, class arrangements and fee details."]].map(([i,t,d],n)=>`<div class="sc rv"><span class="n">${n+1}</span>${ic(i)}<div><h3>${t}</h3><p>${d}</p></div></div>`).join("");
-$("#faqList").innerHTML=[["Who can join Al Furqan Online Academy?","Children, beginners and adults can register according to their current learning level."],["Do I need previous Quran knowledge?","No. Students can register according to their current level and receive appropriate guidance."],["Are the classes online?","Yes. Lessons are conducted online so students can learn from the comfort of home."],["Are the classes free?","No. The classes are paid. Fee and payment details will be discussed through the academy's WhatsApp group after registration."],["Can I choose my class time?","Class times are fixed by the teacher. Students will receive their schedule and class information after registration."],["What happens after I register?","Your registration will be submitted through the form. You will receive a confirmation and can join the WhatsApp group for further information."]].map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join("");
+$("#sg").innerHTML=[["form","Reserve Your Free Spot","Complete the registration form."],["chat","Join WhatsApp","Receive confirmation and join the learning group."],["laptop","Attend Your Zoom Class","Join the live classes Friday, Saturday and Sunday."],["trend","Continue Your Journey","After the free month, choose the learning option that suits you."]].map(([i,t,d],n)=>`<div class="sc rv"><span class="n">${n+1}</span>${ic(i)}<div><h3>${t}</h3><p>${d}</p></div></div>`).join("");
+$("#fdet").innerHTML=[["form","Starts "+FREE_START_DATE],["users","Friday • Saturday • Sunday"],["laptop",FREE_TIME],["chat","Zoom"]].map(([i,t])=>`<span>${ic(i)}${t}</span>`).join("");
+$("#wacList").innerHTML=["Class reminders","Zoom information","Practice reminders","Learning resources","Important announcements","Guidance throughout the program"].map(t=>`<li>${ic("check")}${t}</li>`).join("");
+$("#pg").innerHTML=[
+ {badge:"Start Here",t:"1-Month Free Quran Class",price:"₦0",per:"FREE FOR ONE MONTH",d:"Experience our Quran learning approach and build a strong foundation before continuing your learning journey.",f:["1 month of live Quran classes","Friday, Saturday & Sunday classes","8:30–9:30 PM WAT","Live classes via Zoom","Quran reading practice","Introduction to Tajweed","Guided correction","Access to the WhatsApp learning group","Beginner-friendly learning environment"],btn:"Reserve Free Spot",note:"Limited spots available • Starts "+FREE_START_DATE},
+ {badge:"Most Popular",t:"Online Quran Class",price:PRICE_GROUP,per:"/ month",d:"Continue your Quran learning with structured live classes, regular practice and guided correction.",f:["Live online Quran classes","Quran Reading with Tajweed","Structured learning","Regular guided practice","Recitation correction","WhatsApp learning/support group","Zoom classes","Ongoing progress guidance","Access to the teacher during group classes"],btn:"Join the Online Class",note:"Fee: "+PRICE_GROUP+" per month",rec:true},
+ {badge:"Personalised",t:"One-to-One Quran Class",price:PRICE_1TO1,per:"/ month",d:"Private Quran learning for students who want individual attention and direct access to the teacher.",f:["Private one-to-one classes","Individual attention","Personalised learning pace","Quran Reading with Tajweed","Direct access to the teacher during lessons","Individual recitation correction","Personal progress guidance","Zoom classes","Flexible learning support"],btn:"Choose One-to-One",note:PRICE_1TO1+" per month"}
+].map(p=>`<div class="pc${p.rec?" rec":""} rv">${p.rec?'<span class="pop">Most Popular</span>':""}<span class="pb"${p.rec?' style="visibility:hidden"':""}>${p.badge}</span><h3>${p.t}</h3><div class="pp"><b>${p.price}</b><small>${p.per}</small></div><p class="pd">${p.d}</p><a href="#register" class="btn ${p.rec?"b-y":"b-g"}">${p.btn}</a><ul class="pf">${p.f.map(x=>`<li>${ic("check")}${x}</li>`).join("")}</ul><p class="pn">${p.note}</p></div>`).join("");
+$("#faqList").innerHTML=[
+["Who can join the free Quran class?","The introductory class is designed for learners who want to improve their Quran reading and build a foundation in Tajweed. Beginners and students with some previous Quran-reading experience can join."],
+["When does the free class start?","The one-month free introductory class starts on 10 October 2026. Live classes are held on Friday, Saturday and Sunday at 8:30 PM WAT."],
+["Where will the classes be held?","Classes will be held live online through Zoom. Registered students will receive the relevant class information through the WhatsApp group."],
+["Is the one-month class really free?","Yes. The introductory program is free for one month. Spots are limited and registration is required."],
+["What happens after the free month?","After the introductory month, students who want to continue can join one of our paid learning options. The standard online group class is ₦20,000 per month, while the one-to-one option is ₦50,000 per month."],
+["Can I choose my preferred class time?","No. Class times are fixed by the teacher. The current live class schedule is Friday, Saturday and Sunday at 8:30 PM WAT."],
+["What will I learn during the free month?","Students will work on Quran reading, pronunciation, foundational Tajweed rules, guided recitation practice, correction and revision. The aim is to give students a useful foundation for continued Quran learning."],
+["How do I register?","Complete the registration form on this website. After submitting your details, you will receive a confirmation and be directed to join the academy's WhatsApp group for further class information."]
+].map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join("");
 wireGroup();
 const nav=$("#nav"),menu=$("#menu"),burger=$("#burger");
 addEventListener("scroll",()=>nav.classList.toggle("is-scrolled",scrollY>30),{passive:true});
@@ -342,7 +425,7 @@ form.addEventListener("submit",async e=>{e.preventDefault();ferr.hidden=true;
  try{
   const r=await fetch(FORMSPREE_ENDPOINT,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});
   if(!r.ok)throw 0;
-  box.innerHTML=`<div class="ok" role="status"><div class="tick">${ic("check")}</div><h3>Registration Received!</h3><p>JazakAllahu Khayran. Your registration has been received successfully.</p><p>Please join our WhatsApp group for further information, class arrangements and fee details.</p><div class="cta-row"><a data-group class="btn b-g" href="#" target="_blank" rel="noopener">Join WhatsApp Group</a><a class="btn b-o" href="${WHATSAPP_URL}" target="_blank" rel="noopener">Chat With Us on WhatsApp</a></div></div>`;
+  box.innerHTML=`<div class="ok" role="status"><div class="tick">${ic("check")}</div><h3>JazakAllahu Khayran!</h3><p>Your registration has been received successfully.</p><p>The free introductory class begins on 10 October 2026. Please join our WhatsApp group to receive class reminders, Zoom information and further announcements.</p><div class="cta-row"><a data-group class="btn b-g" href="#" target="_blank" rel="noopener">Join WhatsApp Group</a><a class="btn b-o" href="${WHATSAPP_URL}" target="_blank" rel="noopener">Chat With Us on WhatsApp</a></div></div>`;
   wireGroup();box.scrollIntoView({behavior:"smooth",block:"center"});
  }catch(_){
   st.remove();form.hidden=false;ferr.hidden=false;
