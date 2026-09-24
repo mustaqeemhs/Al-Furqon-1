@@ -161,6 +161,10 @@ footer .brand{color:#fff;margin-bottom:10px}footer .brand i{color:var(--gold)}.f
 .pd{color:var(--mut);font-size:.84rem;margin-bottom:18px;min-height:44px}
 .pc .btn{width:100%;margin-bottom:20px}
 .pf{list-style:none;padding:0;display:grid;gap:10px;flex:1}.pf li{display:flex;gap:9px;align-items:flex-start;font-size:.83rem;color:var(--ink)}.pf li .ic{width:17px;height:17px;color:var(--acc);flex:none;margin-top:1px;stroke-width:2.4}
+.curr-toggle{display:inline-flex;gap:3px;background:var(--pale);border:1px solid #dfe6e2;border-radius:999px;padding:4px;margin:18px auto 0}
+.curr-toggle button{border:0;background:transparent;padding:7px 18px;border-radius:999px;font:600 .78rem Poppins;color:var(--mut);cursor:pointer;transition:background .2s,color .2s}
+.curr-toggle button.on{background:var(--g);color:#fff}
+.pcv{text-align:center;font-size:.74rem;color:var(--mut);margin-top:-2px;margin-bottom:2px}
 .pn{font-size:.76rem;color:var(--mut);margin-top:16px;text-align:center;border-top:1px solid #eef2f0;padding-top:14px}
 /* free-class cta band */
 .fcta-b{max-width:640px;margin:0 auto;text-align:center;background:var(--g);color:#fff;border-radius:22px;padding:clamp(28px,5vw,44px) clamp(20px,5vw,44px);box-shadow:0 20px 44px rgba(4,58,47,.2)}
@@ -217,7 +221,9 @@ footer .brand{color:#fff;margin-bottom:10px}footer .brand i{color:var(--gold)}.f
 <div class="cg" id="cg"></div></div></section>
 
 <section id="programs" class="after"><div class="wrap">
-<div class="head"><span class="lbl">Programs</span><h2>Choose Your Quran Learning <span class="hl">Path</span></h2><p>Start with our free introductory class, continue with structured group learning, or choose personalised one-to-one guidance.</p></div>
+<div class="head"><span class="lbl">Programs</span><h2>Choose Your Quran Learning <span class="hl">Path</span></h2><p>Start with our free introductory class, continue with structured group learning, or choose personalised one-to-one guidance.</p>
+<div class="curr-toggle" id="currToggle" role="group" aria-label="Currency"><button type="button" data-cur="NGN" class="on">₦ NGN</button><button type="button" data-cur="USD">$ USD</button></div>
+</div>
 <div class="pg" id="pg"></div>
 </div></section>
 
@@ -306,7 +312,8 @@ const WHATSAPP_GROUP_URL="https://chat.whatsapp.com/H3Vo3Q78IqL3UgzSujamZp?mode=
 const SOCIAL={instagram:"YOUR_INSTAGRAM_URL",facebook:"YOUR_FACEBOOK_URL",tiktok:"YOUR_TIKTOK_URL",youtube:"YOUR_YOUTUBE_URL"};
 /* Free class */
 const FREE_START_DATE="10 October 2026", FREE_DAYS="Friday, Saturday & Sunday", FREE_TIME="8:30–9:30 PM WAT", FREE_PLATFORM="Zoom";
-const PRICE_GROUP="₦20,000", PRICE_1TO1="₦50,000";
+const PRICE_GROUP_NGN=20000, PRICE_1TO1_NGN=50000;
+const USD_RATE=1600; // approximate ₦ per $1 — update if the rate moves; USD is shown for reference only, fees are charged in Naira
 const FORMSPREE_ENDPOINT="https://formspree.io/f/xbglgave";
 /* Quran page-flip (pages live in assets/quran-pages/page-001.jpg …) */
 const AUTO_FLIP_ENABLED=true;
@@ -345,12 +352,27 @@ $("#sg").innerHTML=[["form","Reserve Your Free Spot","Complete the registration 
 $("#fdet").innerHTML=[["form","Starts "+FREE_START_DATE],["users","Friday • Saturday • Sunday"],["laptop",FREE_TIME],["chat","Zoom"]].map(([i,t])=>`<span>${ic(i)}${t}</span>`).join("");
 $("#wacList").innerHTML=["Class reminders","Zoom information","Practice reminders","Learning resources","Important announcements","Guidance throughout the program"].map(t=>`<li>${ic("check")}${t}</li>`).join("");
 const PLANS=[
- {badge:"Start Here",t:"1-Month Free Quran Class",price:"₦0",per:"FREE FOR ONE MONTH",d:"Experience our Quran learning approach and build a strong foundation before continuing your learning journey.",f:["1 month of live Quran classes","Friday, Saturday & Sunday classes","8:30–9:30 PM WAT","Live classes via Zoom","Quran reading practice","Introduction to Tajweed","Guided correction","Access to the WhatsApp learning group","Beginner-friendly learning environment"],btn:"Reserve Free Spot",note:"Limited spots available • Starts "+FREE_START_DATE},
- {badge:"Most Popular",t:"Online Quran Class",price:PRICE_GROUP,per:"/ month",d:"Continue your Quran learning with structured live classes, regular practice and guided correction.",f:["Live online Quran classes","Quran Memorisation (Hifz) included","Quran Reading with Tajweed","Structured learning","Regular guided practice","Recitation correction","WhatsApp learning/support group","Zoom classes","Ongoing progress guidance","Access to the teacher during group classes"],btn:"Join the Online Class",note:"Fee: "+PRICE_GROUP+" per month",rec:true},
- {badge:"Personalised",t:"One-to-One Quran Class",price:PRICE_1TO1,per:"/ month",d:"Private Quran learning for students who want individual attention and direct access to the teacher.",f:["Private one-to-one classes","Quran Memorisation (Hifz) included","Individual attention","Personalised learning pace","Quran Reading with Tajweed","Direct access to the teacher during lessons","Individual recitation correction","Personal progress guidance","Zoom classes","Flexible learning support"],btn:"Choose One-to-One",note:PRICE_1TO1+" per month"}
+ {badge:"Start Here",t:"1-Month Free Quran Class",ngn:0,per:"FREE FOR ONE MONTH",d:"Experience our Quran learning approach and build a strong foundation before continuing your learning journey.",f:["1 month of live Quran classes","Friday, Saturday & Sunday classes","8:30–9:30 PM WAT","Live classes via Zoom","Quran reading practice","Introduction to Tajweed","Guided correction","Access to the WhatsApp learning group","Beginner-friendly learning environment"],btn:"Reserve Free Spot",noteFn:()=>"Limited spots available • Starts "+FREE_START_DATE},
+ {badge:"Most Popular",t:"Online Quran Class",ngn:PRICE_GROUP_NGN,per:"/ month",d:"Continue your Quran learning with structured live classes, regular practice and guided correction.",f:["Live online Quran classes via Zoom","Quran Memorisation (Hifz) included","Quran Reading with Tajweed","Basic Islamic Duas & Hadith","Structured, guided practice with correction","WhatsApp support group"],btn:"Join the Online Class",noteFn:m=>"Fee: "+m(PRICE_GROUP_NGN)+" per month",rec:true},
+ {badge:"Personalised",t:"One-to-One Quran Class",ngn:PRICE_1TO1_NGN,per:"/ month",d:"Private Quran learning for students who want individual attention and direct access to the teacher.",f:["Private one-to-one classes","Quran Memorisation (Hifz) included","Individual attention","Personalised learning pace","Quran Reading with Tajweed","Direct access to the teacher during lessons","Individual recitation correction","Personal progress guidance","Zoom classes","Flexible learning support"],btn:"Choose One-to-One",noteFn:m=>m(PRICE_1TO1_NGN)+" per month"}
 ];
 $("#plan").innerHTML+=PLANS.map(p=>`<option>${p.t}</option>`).join("");
-$("#pg").innerHTML=PLANS.map(p=>`<div class="pc${p.rec?" rec":""} rv">${p.rec?'<span class="pop">Most Popular</span>':""}<span class="pb"${p.rec?' style="visibility:hidden"':""}>${p.badge}</span><h3>${p.t}</h3><div class="pp"><b>${p.price}</b><small>${p.per}</small></div><p class="pd">${p.d}</p><a href="#register" class="btn ${p.rec?"b-y":"b-g"}" data-plan="${p.t}">${p.btn}</a><ul class="pf">${p.f.map(x=>`<li>${ic("check")}${x}</li>`).join("")}</ul><p class="pn">${p.note}</p></div>`).join("");
+let currency="NGN";
+function money(ngn,cur){
+ cur=cur||currency;
+ if(ngn===0)return cur==="NGN"?"₦0":"$0";
+ return cur==="USD" ? "$"+Math.round(ngn/USD_RATE).toLocaleString() : "₦"+ngn.toLocaleString();
+}
+function renderPlans(){
+ $("#pg").innerHTML=PLANS.map(p=>`<div class="pc${p.rec?" rec":""} rv in">${p.rec?'<span class="pop">Most Popular</span>':""}<span class="pb"${p.rec?' style="visibility:hidden"':""}>${p.badge}</span><h3>${p.t}</h3><div class="pp"><b>${money(p.ngn)}</b><small>${p.per}</small></div>${p.ngn>0?`<p class="pcv">≈ ${money(p.ngn,currency==="NGN"?"USD":"NGN")}${currency==="NGN"?" USD":""} · for reference, billed in Naira</p>`:""}<p class="pd">${p.d}</p><a href="#register" class="btn ${p.rec?"b-y":"b-g"}" data-plan="${p.t}">${p.btn}</a><ul class="pf">${p.f.map(x=>`<li>${ic("check")}${x}</li>`).join("")}</ul><p class="pn">${p.noteFn(money)}</p></div>`).join("");
+ document.querySelectorAll("[data-plan]").forEach(c=>c.addEventListener("click",()=>prefill(c.dataset.plan)));
+}
+renderPlans();
+document.querySelectorAll("#currToggle button").forEach(btn=>btn.addEventListener("click",()=>{
+ currency=btn.dataset.cur;
+ document.querySelectorAll("#currToggle button").forEach(b=>b.classList.toggle("on",b===btn));
+ renderPlans();
+}));
 $("#faqList").innerHTML=[
 ["Who can join the free Quran class?","The introductory class is designed for learners who want to improve their Quran reading and build a foundation in Tajweed. Beginners and students with some previous Quran-reading experience can join."],
 ["When does the free class start?","The one-month free introductory class starts on 10 October 2026. Live classes are held on Friday, Saturday and Sunday at 8:30 PM WAT."],
@@ -379,7 +401,6 @@ function toggleLevel(){
 }
 $("#plan").addEventListener("change",toggleLevel);
 document.querySelectorAll("[data-course]").forEach(c=>c.addEventListener("click",()=>prefill(c.dataset.course)));
-document.querySelectorAll("[data-plan]").forEach(c=>c.addEventListener("click",()=>prefill(c.dataset.plan)));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll(".rv").forEach(e=>io.observe(e));
 
